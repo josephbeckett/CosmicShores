@@ -1,45 +1,50 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <!-- Linking Stylesheet to HTML -->
       <link rel="stylesheet" href="assets/css/myStyleSheet.css">
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
-        <source src="images/840331843.mp4" type="video/mp4">
-    </video>  
-    </head>
+    </head>    
+    <body>
+                <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+        <script>$(document).ready(function(){$(".button-collapse").sideNav();}) </script>
+        <video playsinline autoplay muted loop id="bgvid">
+            <source src="images/840331843.mp4" type="video/mp4">
+        </video>
 
-    <body>  
-      
-    <nav>
-        <div class=" nav-wrapper container">
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
+        <!-- Navbar -->
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">       
+                    <a href="#!" class="brand-logo"></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+           </nav>
         </div>
-    </nav>
-    <script> 
-          $(".button-collapse").sideNav();
-      </script>
+        
+        
     </body>
 </html>
