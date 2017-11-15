@@ -14,7 +14,8 @@ video#bgvid {
     background-size: cover; 
 }
 
-.nav{
+.navbar{
     font-family: 'Palanquin Dark', sans-serif;
+    color: rgba 0,0,0,0
 }
 
