@@ -1,5 +1,7 @@
 <?php
 include("config.php")
+include("login.php")
+
 
 ?>
 <html>
@@ -17,10 +19,6 @@ include("config.php")
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-
-
-
 
   </head>
 <!-- Start of body -->
@@ -82,14 +80,14 @@ include("config.php")
         <div class="modal-content">
 			<div class="container">
 				<div class="input-field">
-					<input type="text" id="username" required>
-					<label for="username">Username</label>
+					<input type="text" name="txtUsername" required>
+					<label for="txtUsername">Username</label>
 				</div>
 				<div class="input-field">
-					<input type="password" id="password" required>
-					<label for="password">Password</label>
+					<input type="password" name="txtPassword" required>
+					<label for="txtPassword">Password</label>
 				</div> 
-				<a class="waves-effect waves-light" type="submit">Login</a>
+				<button class="waves-effect waves-light btn" type="submit">Login</button>
 			  </div>
 		</div>
     </div>

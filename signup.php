@@ -21,7 +21,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $info ="Unable to Add User!";
     }
 }
-
 ?>
 <html>
   <head>
@@ -37,7 +36,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
   </head>
 
   <body>
