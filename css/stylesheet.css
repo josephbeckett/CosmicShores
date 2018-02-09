@@ -1,0 +1,232 @@
+/* Video Background */ 
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.backcolor{
+	background-color: #343d46;
+}
+/* Main Body CSS */
+
+html {
+    font-family: 'Righteous', cursive;
+	color: #4286f4;
+  }
+      
+
+.transparentBG {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+  }
+
+  .nav-wrapper {
+    font-family: 'Righteous', cursive;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+ .normalNav{
+    font-family: 'Righteous', cursive;
+    background-color: #2B448C;
+    height: 60px;
+    line-height: 60px;
+ }
+
+ nav {
+    height: 60px;
+    line-height: 60px;
+}
+ 
+ .parallax-container {
+    height: 800px;
+	
+  }
+
+	.collection{
+		background-color: #ffffff;
+	}
+  .section {
+    font-family: 'Righteous', cursive;
+	font-color: #4286f4;
+  }
+
+
+  .preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}
+
+.font {
+	font-family: 'Righteous', cursive;
+	color: #4286f4;
+}
+
+
+
+.card-content {
+	text-align: center;
+	color: #4286f4;
+}
+
+.card-title {
+	color: #4286f4;
+}
+
+.btn {
+	margin: 15px
+}
+
+.pad {
+	padding-top: 10px;
+}
+
+.modal { 
+	width: 30% !important ; 
+	max-height: 50% !important;
+	background: #34636d;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: transparent;
+    color: #4286f4;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: grey;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* Mobile Responsiveness */
+
+@media all and (max-width: 1200px){
+	.nav-wrapper{
+	padding-left: 50px;
+    padding-right: 50px;
+	}
+
+	.material-icons{
+	padding-right: 30px;
+	}
+	.modal { 
+	width: 40% !important ; 
+	max-height: 60% !important;
+	}
+	#message {
+		display:none;
+		background: transparent;
+		color: #4286f4;
+		position: relative;
+		padding: 20px;
+		margin-top: 10px;
+	}
+}
+
+@media all and (max-width: 992px){
+	.nav-wrapper{
+	padding-left: 50px;
+    padding-right: 50px;
+	}
+	.material-icons{
+	padding-right: 30px;
+	}
+	.modal { 
+	width: 50% !important ; 
+	max-height: 70% !important;
+	}
+	#message {
+		display:none;
+		background: transparent;
+		color: #4286f4;
+		position: relative;
+		padding: 20px;
+		margin-top: 10px;
+	}
+}
+
+@media all and (max-width: 600px){
+	.logoPC {
+		opacity: 0;
+	
+	}
+	.nav-wrapper{
+	padding: 0px;
+	}
+	.material-icons{
+	padding-right: 30px;
+	}
+	.modal { 
+	width: 60% !important ; 
+	max-height: 80% !important;
+	}
+	.hide
+	{
+	
+	}
+	#message {
+		display:none;
+		background: transparent;
+		color: #4286f4;
+		position: relative;
+		padding: 20px;
+		margin-top: 10px;
+	}
+}
