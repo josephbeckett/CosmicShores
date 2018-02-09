@@ -30,17 +30,17 @@
             <img src="images/CosmicShoresLogoWithoutLogo.png" alt="">
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="#modal1" class="modal-trigger">Login</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="#modal1" class="modal-trigger">Login</a></li>
             </ul>
         </div>

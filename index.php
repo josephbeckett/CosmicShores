@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include("config.php")
+
+?>
 <html>
   <head>
 	  <title>Home</title>
@@ -49,17 +52,17 @@
 			<img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="#modal1" class="modal-trigger">Login</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="#modal1" class="modal-trigger">Login</a></li>
             </ul>
         </div>
@@ -70,7 +73,7 @@
 			  <h1> Cosmic Shores </h1>
 			  <h3> Amateur Astronomy Society</h3>
 			  <br>
-			  <a href="signup.html" class="wave-effect waves-light btn"> Want to become a member?</a>
+			  <a href="signup.php" class="wave-effect waves-light btn"> Want to become a member?</a>
 		  </div>
 	  </div> 
 
