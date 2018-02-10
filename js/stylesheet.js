@@ -31,33 +31,11 @@ $('.datepicker').pickadate({
     closeOnSelect: false // Close upon selecting a date,
   });
 
-// Modal Trigger 
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
 
-// Modal 
-  $('.modal').modal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      inDuration: 300, // Transition in duration
-      outDuration: 200, // Transition out duration
-      startingTop: '4%', // Starting top style attribute
-      endingTop: '10%', // Ending top style attribute
-    }
-  );
-
-// Clearing Modal Form 
-$('#clear-form').on('click', function()
-    {
-        $('#model1').find('input:text, input:username, select, textarea').val("");
-        $('#modal1').find('input:password, input:password, select, textarea').val("");
-});
 
 // Password Validator
 
-var myInput = document.getElementById("password");
+var myInput = document.getElementById("txtPassword");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
