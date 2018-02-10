@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myDOB = mysqli_real_escape_string($conn,$_POST["txtDOB"]);
 
     $sql = "INSERT INTO User (FirstName, LastName, Username, Password, Email, QuestionAnswer, DOB)
-    VALUES ('$myfirsdsaftname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myQuestionAnswer', '$myDOB')";
+    VALUES ('$myfirstname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myQuestionAnswer', '$myDOB')";
     if (mysqli_query($conn, $sql)) {
         $info = "User Created Successfully!";
     } else {
