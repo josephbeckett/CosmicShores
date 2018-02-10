@@ -1,27 +1,3 @@
-<?php
-include("config.php");
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-// username and password sent from form
-
-    $myfirstname = mysqli_real_escape_string($conn,$_POST["txtFirsName"]);
-    $mylastname = mysqli_real_escape_string($conn,$_POST["txtLastName"]);
-    $myusername = mysqli_real_escape_string($conn,$_POST["txtUsername"]);
-    $mypassword = mysqli_real_escape_string($conn,$_POST["txtPassword"]);
-    $myemail = mysqli_real_escape_string($conn,$_POST["txtEmail"]);
-    $myQuestionAnswer = mysqli_real_escape_string($conn,$_POST["txtQuestionAnswer"]);
-    $myDOB = mysqli_real_escape_string($conn,$_POST["txtDOB"]);
-
-    $sql = "INSERT INTO User (FirstName, LastName, Username, Password, Email, QuestionAnswer, DOB)
-    VALUES ('$myfirsdsaftname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myQuestionAnswer', '$myDOB')";
-    if (mysqli_query($conn, $sql)) {
-        $info = "User Created Successfully!";
-    } 
-    else {
-        $info ="Unable to Add User!";
-    }
-}
-?>
 <html>
   <head>
 	  <title>Sign Up</title>
@@ -68,14 +44,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="about.php">About</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="#modal1" class="modal-trigger">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="#modal1" class="modal-trigger">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
     </nav>

@@ -1,32 +1,3 @@
-<?php
-include("config.php")
-session_start();
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-   // username and password sent from form 
-   
-   $myusername = mysqli_real_escape_string($conn,$_POST["txtUsername"]);
-   $mypassword = mysqli_real_escape_string($conn,$_POST["txtPassword"]); 
-   
-   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername' and Password = '$mypassword'";
-   $result = mysqli_query($conn,$sql);
-   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-   $active = $row["active"];
-   
-   $count = mysqli_num_rows($result);
-   
-   // If result matched $myusername and $mypassword, table row must be 1 row
-     
-   if($count == 1) {
-      $_SESSION["login_user"] = $row["CustomerID"];
-      
-      header("location: dashboard.php");
-   }else {
-      $info = "Your Login Name or Password is invalid";
-   }
-}
-mysqli_close($conn);
-?>
 <html>
   <head>
 	  <title>Home</title>
@@ -77,14 +48,14 @@ mysqli_close($conn);
                 <li><a href="about.php">About</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="#modal1" class="modal-trigger">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="#modal1" class="modal-trigger">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
     </nav>
