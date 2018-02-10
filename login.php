@@ -2,8 +2,7 @@
 include("config.php")
 session_start();
 ini_set('display_errors', 1);
-
-
+$info = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    // username and password sent from form 
    
@@ -26,8 +25,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    } else {
       $info = "Your Login Name or Password is invalid";
    }
+	mysqli_close($conn);
 }
-mysqli_close($conn);
+
 ?>
 <html>
   <head>
