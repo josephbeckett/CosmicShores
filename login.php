@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       $_SESSION["login_user"] = $row["CustomerID"];
       
       header("location: dashboard.php");
-   }else {
+   } else {
       $info = "Your Login Name or Password is invalid";
    }
 }
@@ -77,17 +77,19 @@ mysqli_close($conn);
         </div>
     </nav>
 	  <!-- Content -->
-    <div class="container" method="post">
-        <div class="input-field">
-            <input type="text" name="txtUsername" required>
-            <label for="txtUsername">Username</label>
+    <form>
+        <div class="container" method="post">
+            <div class="input-field">
+                <input type="text" name="txtUsername" required>
+                <label for="txtUsername">Username</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="txtPassword" required>
+                <label for="txtPassword">Password</label>
+            </div> 
+            <button class="waves-effect waves-light btn" type="submit">Login</button>
         </div>
-        <div class="input-field">
-            <input type="password" name="txtPassword" required>
-            <label for="txtPassword">Password</label>
-        </div> 
-        <button class="waves-effect waves-light btn" type="submit">Login</button>
-    </div>
+    </form>
 
 
     <!--Import jQuery before materialize.js-->
