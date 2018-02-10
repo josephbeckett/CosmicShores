@@ -103,7 +103,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="row">
                     <div class="input-field col s12">
-                        <input name="txtPassword" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required  class="validate">
+                        <input id="password" name="txtPassword" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required  class="validate">
                         <label for="txtPassword">Password</label>
                     </div>
                     </div>
