@@ -35,7 +35,7 @@ $('.datepicker').pickadate({
 
 // Password Validator
 
-var myInput = document.getElementById("txtPassword");
+var myInput = document.getElementById("password");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
