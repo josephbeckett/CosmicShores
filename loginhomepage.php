@@ -68,7 +68,7 @@ mysqli_close($conn);
 	  <!-- Content -->
     <div class="container font center">
         <div class="col s12 m12 l3">
-            <h1>Welcome <?php echo $row["FirstName"]; ?></h1>
+            <h1>Welcome <?php echo $row["Username"]; ?></h1>
         </div>
     </div> 
 
