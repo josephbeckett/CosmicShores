@@ -52,13 +52,13 @@ $info ="";
         <div class="container">
             <form action = "" method = "post">
                 <label>Username : <?php echo $row["Username"]?></label><br /><br />
-                <label>First Name :</label><input type = "text" name = "txtFirstname" class = "box"/><br /><br />
-                <label>Last Name :</label><input type = "text" name = "txtLastname" class = "box"/><br /><br />
+                <label>First Name :</label><input type = "text" name = "txtFirstName" class = "box"/><br /><br />
+                <label>Last Name :</label><input type = "text" name = "txtLastName" class = "box"/><br /><br />
                 <label>Email :</label><input type = "text" name = "txtEmail" class = "box"/><br /><br />
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
                 <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>   
             </form>
-            <h2><a href="loginhomepage.php">Return to Dashboard</a></h2>
+            <h2><a href="loginhomepage.php">Return to Home page</a></h2>
             <h2><a href = "login.php">Sign Out</a></h2>
             <div><?php echo $info; ?></div>
         </div>
