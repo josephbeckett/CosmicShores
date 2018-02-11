@@ -77,8 +77,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </nav>
 	  <!-- Content -->
-    <form>
-        <div class="container" method="post">
+    <form method="post">
+        <div class="container">
             <div class="input-field">
                 <input type="text" name="txtUsername" required>
                 <label for="txtUsername">Username</label>
@@ -98,3 +98,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <script type="text/javascript" src="js/stylesheet.js"></script>
   </body>
 </html>
+
