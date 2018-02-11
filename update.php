@@ -52,19 +52,15 @@ $info ="";
         <div class="container">
             <form action = "" method = "post">
                 <label>Username : <?php echo $row["Username"]?></label><br /><br />
-                <label>First Name :</label><input type = "text" name = "txtFirstname" value = "<?php
-                echo $row["FirstName"]?>" class = "box"/><br /><br />
-                <label>Last Name :</label><input type = "text" name = "txtLastname" value = "<?php
-                echo $row["LastName"]?>" class = "box"/><br /><br />
-                <label>Email :</label><input type = "text" name = "txtEmail" value = "<?php echo
-                $row["Email"]?>"class = "box"/><br /><br />
+                <label>First Name :</label><input type = "text" name = "txtFirstname" class = "box"/><br /><br />
+                <label>Last Name :</label><input type = "text" name = "txtLastname" class = "box"/><br /><br />
+                <label>Email :</label><input type = "text" name = "txtEmail" class = "box"/><br /><br />
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
                 <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>   
             </form>
-            <h2><a href="dashboard.php">Return to Dashboard</a></h2>
+            <h2><a href="loginhomepage.php">Return to Dashboard</a></h2>
             <h2><a href = "login.php">Sign Out</a></h2>
-            <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $info;
-            ?></div>
+            <div><?php echo $info; ?></div>
         </div>
     </div>
 
