@@ -1,6 +1,6 @@
 <?php
 include("config.php");
-include("testlogin.php");
+include("loggingin.php");
 ini_set('display_errors', 1);
 $info = "";
 ?>

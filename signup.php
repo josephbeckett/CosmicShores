@@ -2,8 +2,6 @@
 include("config.php");
 include("creatinguser.php");
 $info = "";
-
-
 ?>
 <html>
   <head>
