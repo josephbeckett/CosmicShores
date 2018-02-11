@@ -1,7 +1,7 @@
 <?php
 include('session.php');
 
-$sql = "SELECT Username FROM User WHERE customerID = '$_SESSION[login_user]'";
+$sql = "SELECT CustomerID, Username FROM User WHERE customerID = '$_SESSION[login_user]'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 mysqli_close($conn);
