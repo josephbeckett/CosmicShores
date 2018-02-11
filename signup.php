@@ -87,7 +87,7 @@ $info = "";
                         <label for="txtPassword">Password</label>
                     </div>
                     </div>
-					<div id="message" for="txtPassword">
+					<div class="container" id="message" for="txtPassword">
 					  <h6>Password must contain the following:</h6>
 						<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
 						<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
