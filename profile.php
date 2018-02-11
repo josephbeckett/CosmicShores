@@ -67,13 +67,14 @@ mysqli_close($conn);
     </nav>
 	  <!-- Content -->
     <div class = "container">
-        <h1>Welcome <?php echo $row["FirstName"]; ?></h1>
-        <?php echo "Username: " . $row["Username"] . "</br>"?>
-        <?php echo "FirstName: " . $row["FirstName"] . "</br>"?>
-        <?php echo "LastName: " . $row["LastName"] . "</br>"?>
-        <?php echo "Email: " . $row["Email"] . "</br>"?>
-        <?php echo "QuestionAnswer: " . $row["QuestionAnswer"] . "</br>"?>
-        <?php echo "DOB: " . $row["DOB"] . "</br>"?>
+        <h2>Hello <?php echo $row["FirstName"]; ?></h2>
+        <h2>Profile Details</h2>
+        <h4><?php echo "Username: " . $row["Username"] . "</br>"?></h4>
+        <h4><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></h4>
+        <h4><?php echo "LastName: " . $row["LastName"] . "</br>"?></h4>
+        <h4><?php echo "Email: " . $row["Email"] . "</br>"?></h4>
+        <h4><?php echo "QuestionAnswer: " . $row["QuestionAnswer"] . "</br>"?></h4>
+        <h4><?php echo "DOB: " . $row["DOB"] . "</br>"?></h4>
         <h2><a href="update.php">Update Details</a></h2>
         <h2><a href = "login.php">Sign Out</a></h2>
     </div>
