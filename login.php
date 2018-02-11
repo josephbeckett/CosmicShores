@@ -1,5 +1,5 @@
 <?php
-include("config.php")
+include("config.php");
 session_start();
 ini_set('display_errors', 1);
 $info = "";
