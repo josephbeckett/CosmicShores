@@ -69,24 +69,6 @@
 		  </div>
 	  </div> 
 
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal font">
-        <div class="modal-content">
-			<div class="container" method="post">
-				<div class="input-field">
-					<input type="text" name="txtUsername" required>
-					<label for="txtUsername">Username</label>
-				</div>
-				<div class="input-field">
-					<input type="password" name="txtPassword" required>
-					<label for="txtPassword">Password</label>
-				</div> 
-				<button class="waves-effect waves-light btn" type="submit">Login</button>
-			  </div>
-		</div>
-    </div>
-
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

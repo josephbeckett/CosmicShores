@@ -1,12 +1,14 @@
 <?php
-include("config.php");
-include("loggingin.php");
-ini_set('display_errors', 1);
-$info = "";
+include('session.php');
+
+$sql = "SELECT Username FROM User WHERE customerID = '$_SESSION[login_user]'";
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+mysqli_close($conn);
 ?>
 <html>
   <head>
-	  <title>Login</title>
+	  <title>Home</title>
     <!--Import Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
     <!--Import Google Icon Font-->
@@ -24,6 +26,20 @@ $info = "";
 <!-- Start of body -->
   <body>
 	  
+<!-- Page loading transition -->
+    <div class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
             <source src="video/fundo.webm" type="video/webm">
@@ -36,35 +52,25 @@ $info = "";
 			<img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="about.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="login.php">Sign out</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="login.php">Sign out</a></li>
             </ul>
         </div>
     </nav>
 	  <!-- Content -->
-    <form method="post">
-        <div class="container">
-            <div class="input-field">
-                <input type="text" name="txtUsername" required>
-                <label for="txtUsername">Username</label>
-            </div>
-            <div class="input-field">
-                <input type="password" name="txtPassword" required>
-                <label for="txtPassword">Password</label>
-            </div> 
-            <button class="waves-effect waves-light btn" type="submit">Login</button>
+    <div class="container font center">
+        <div class="col s12 m12 l3">
+            <h1>Welcome <?php echo $row["FirstName"]; ?></h1>
         </div>
-    </form>
+    </div> 
 
 
     <!--Import jQuery before materialize.js-->
@@ -73,4 +79,3 @@ $info = "";
     <script type="text/javascript" src="js/stylesheet.js"></script>
   </body>
 </html>
-
