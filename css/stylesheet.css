@@ -166,17 +166,16 @@ input[type=text], input[type=password] {
 	.material-icons{
 	padding-right: 30px;
 	}
-	.modal { 
-	width: 40% !important ; 
-	max-height: 60% !important;
-	}
 	#message {
-		display:none;
+		display: none;
 		background: transparent;
 		color: #4286f4;
 		position: relative;
 		padding: 20px;
 		margin-top: 10px;
+		width: 40%; 
+		max-height: 60%;
+
 	}
 }
 
@@ -188,17 +187,15 @@ input[type=text], input[type=password] {
 	.material-icons{
 	padding-right: 30px;
 	}
-	.modal { 
-	width: 50% !important ; 
-	max-height: 70% !important;
-	}
 	#message {
 		display:none;
 		background: transparent;
 		color: #4286f4;
 		position: relative;
 		padding: 20px;
-		margin-top: 10px;
+		margin-top: 10px;	
+		width: 50%; 
+		max-height: 70%;
 	}
 }
 
@@ -213,14 +210,6 @@ input[type=text], input[type=password] {
 	.material-icons{
 	padding-right: 30px;
 	}
-	.modal { 
-	width: 60% !important ; 
-	max-height: 80% !important;
-	}
-	.hide
-	{
-	
-	}
 	#message {
 		display:none;
 		background: transparent;
@@ -228,5 +217,7 @@ input[type=text], input[type=password] {
 		position: relative;
 		padding: 20px;
 		margin-top: 10px;
+		width: 60%; 
+		max-height: 80%;
 	}
 }
