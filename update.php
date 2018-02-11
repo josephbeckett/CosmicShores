@@ -1,50 +1,6 @@
 <?php
+include("updatinguserdetails.php");
 $info ="";
-include("session.php");
-function displayUser($conn, $login_user) {
-    $sql = "SELECT userID, username, password, firstname, lastname, email FROM test
-    WHERE userID = '$login_user' ";
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-
-    return $row;
-}
-function updateUser($conn, $login_user) {
-$myfirstname = mysqli_real_escape_string($conn,$_POST["txtFirstname"]);
-$mylastname = mysqli_real_escape_string($conn,$_POST["txtLastname"]);
-$myemail = mysqli_real_escape_string($conn,$_POST["txtEmail"]);
-
-$sql = "UPDATE test SET firstname = '$myfirstname', lastname = '$mylastname', email =
-'$myemail' WHERE userID = '$_SESSION[login_user]' ";
-if (mysqli_query($conn, $sql)) {
-    $info = "Updated User successfully ";
-} else {
-    $info = "Error updating User: ". mysqli_error($conn);
-}
-return $info;
-}
-function deleteUser($conn, $login_user) {
-$sql = "DELETE FROM test WHERE userID = '$_SESSION[login_user]' ";
-if (mysqli_query($conn, $sql)) {
-    $info = "User deleted successfully";
-header("Location: login.php");
-} else {
-    $info = "Error deleting User: " . mysqli_error($conn);
-}
-return $info;
-}
-if(isset($_POST["update"])){
-    $info = updateUser($conn, $_SESSION["login_user"]);
-    $row = displayUser($conn, $_SESSION["login_user"]);
-}
-else if (isset($_POST["delete"])){
-    $info = deleteUser($conn, $_SESSION["login_user"]);
-}
-else
-{
-    $row = displayUser($conn, $_SESSION["login_user"]);
-}
-mysqli_close($conn);
 ?>
 <html>
   <head>
@@ -95,13 +51,13 @@ mysqli_close($conn);
     <div class="section">
         <div class="container">
             <form action = "" method = "post">
-                <label>UserName : <?php echo $row["username"]?></label><br /><br />
+                <label>Username : <?php echo $row["Username"]?></label><br /><br />
                 <label>First Name :</label><input type = "text" name = "txtFirstname" value = "<?php
-                echo $row["firstname"]?>" class = "box"/><br /><br />
+                echo $row["FirstName"]?>" class = "box"/><br /><br />
                 <label>Last Name :</label><input type = "text" name = "txtLastname" value = "<?php
-                echo $row["lastname"]?>" class = "box"/><br /><br />
+                echo $row["LastName"]?>" class = "box"/><br /><br />
                 <label>Email :</label><input type = "text" name = "txtEmail" value = "<?php echo
-                $row["email"]?>"class = "box"/><br /><br />
+                $row["Email"]?>"class = "box"/><br /><br />
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
                 <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>   
             </form>
