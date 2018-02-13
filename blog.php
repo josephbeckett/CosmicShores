@@ -1,9 +1,10 @@
 <?php
+include("blogpost.php");
 include("userdetails.php");
 ?>
 <html>
   <head>
-	  <title>Profile</title>
+	  <title>Dashboard</title>
     <!--Import Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
     <!--Import Google Icon Font-->
@@ -38,30 +39,18 @@ include("userdetails.php");
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="support.php">Support</a></li>
                 <li><a href="login.php">Sign out</a></li>
+                
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="profile.php">Profile</a></li>
-                <li><a href="about.php">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="support.php">Support</a></li>
                 <li><a href="login.php">Sign out</a></li>
             </ul>
         </div>
     </nav>
 	  <!-- Content -->
-    <div class="section">
-        <div class="container">
-            <h2>Profile Details for <?php echo $row["Username"]; ?></h2>
-            <p1><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
-            <p1><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
-            <p1><?php echo "LastName: " . $row["LastName"] . "</br>"?></p1>
-            <p1><?php echo "Email: " . $row["Email"] . "</br>"?></p1>
-            <p1><?php echo "QuestionAnswer: " . $row["QuestionAnswer"] . "</br>"?></p1>
-            <p1><?php echo "DOB: " . $row["DOB"] . "</br>"?></p1>
-            <h2><a href="update.php">Update Details</a></h2>
-            <h2><a href = "login.php">Sign Out</a></h2>
-        </div>
-    </div>
+
 
 
     <!--Import jQuery before materialize.js-->

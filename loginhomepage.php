@@ -1,14 +1,9 @@
 <?php
-include('session.php');
-
-$sql = "SELECT CustomerID, Username FROM User WHERE customerID = '$_SESSION[login_user]'";
-$result = mysqli_query($conn,$sql);
-$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-mysqli_close($conn);
+include("userdetails.php");
 ?>
 <html>
   <head>
-	  <title>Home</title>
+	  <title>Dashboard</title>
     <!--Import Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
     <!--Import Google Icon Font-->
@@ -55,7 +50,9 @@ mysqli_close($conn);
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="about.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="support.php">Support</a></li>
                 <li><a href="login.php">Sign out</a></li>
+                
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="profile.php">Profile</a></li>
