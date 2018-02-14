@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("includes\config.php");
 session_start();
 $info = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {

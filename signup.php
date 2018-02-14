@@ -1,6 +1,6 @@
 <?php
-include("config.php");
-include("creatinguser.php");
+include("includes\config.php");
+include("includes\creatinguser.php");
 $info = "";
 ?>
 <html>
