@@ -1,5 +1,5 @@
 <?php
-include("includes\updatinguserdetails.php");
+include("updatinguserdetails.php");
 $info ="";
 ?>
 <html>

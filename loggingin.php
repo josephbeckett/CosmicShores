@@ -1,5 +1,5 @@
 <?php
-include("includes\config.php");
+include("config.php");
 session_start();
 ini_set('display_errors', 1);
 $info = "";
@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    if($count == 1) {
       $_SESSION["login_user"] = $row["CustomerID"];
       
-      header("location: cosmic-shores.gwiddle.co.uk\loginhomepage.php");
+      header("location: loginhomepage.php");
    } else {
       $info = "Your Login Name or Password is invalid";
    }

@@ -1,6 +1,6 @@
 <?php
-include("includes\config.php");
-include("includes\creatinguser.php");
+include("config.php");
+include("creatinguser.php");
 $info = "";
 ?>
 <html>
@@ -101,10 +101,10 @@ $info = "";
                     <div class="input-field col s12">
                         <select name="txtQuestionAnswer">
                             <option value="" disabled selected>What skill level are you at Photography?</option>
-                            <option value="1">Beginner</option>
-                            <option value="2">Novice</option>
-                            <option value="3">Hobbyist</option>
-                            <option value="4">Competent Photographer</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Novice">Novice</option>
+                            <option value="Hobbyist">Hobbyist</option>
+                            <option value="Competent">Competent</option>
                         </select>
                         <label data-error="wrong" data-success="right" ></label>
                     </div>
