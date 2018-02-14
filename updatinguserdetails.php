@@ -27,7 +27,7 @@ function deleteUser($conn, $login_user) {
 $sql = "DELETE FROM User WHERE CustomerID = '$_SESSION[login_user]' ";
 if (mysqli_query($conn, $sql)) {
     $info = "User deleted successfully";
-header("Location: login.php");
+header("Location: logout.php");
 } else {
     $info = "Error deleting User: " . mysqli_error($conn);
 }

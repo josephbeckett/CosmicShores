@@ -75,7 +75,7 @@ $info = "";
                     </div>
 					<div class="row">
                     <div class="input-field col s12">
-                        <input name="txtUsername" type="text">
+                        <input class="validate" name="txtUsername" type="text">
                         <label for="txtUsername">Username</label>
                     </div>
                     </div>
