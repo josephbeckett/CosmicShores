@@ -1,6 +1,6 @@
 <?php
-include("blogpost.php");
-include("userdetails.php");
+include("includes\blogpost.php");
+include("includes\userdetails.php");
 ?>
 <html>
   <head>
