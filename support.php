@@ -75,12 +75,16 @@ $info = "Problem Submitted";
 	<form method="post">
 		<div class="container">
 			<div class="input-field">
-				<input type="text" name="txtProblemTitle" required>
+				<input type="text" name="txtProblemTitle" required data-length"100">
 				<label for="txtProblemTitle">Problem Title</label>
 			</div>
 			<div class="input-field col s12">
-				<textarea id="txtProblemDescription" class="materialize-textarea" data-length="240"></textarea>
-				<label for="txtProblemDescription">Textarea</label>
+				<textarea id="txtProblemSubtitle" class="materialize-textarea" data-length="200"></textarea>
+				<label for="txtProblemSubtitle">Problem Description</label>
+			</div>
+            <div class="input-field col s12">
+                <textarea id="txtProblemContent" class="materialize-textarea" data-length="500"></textarea>
+				<label for="txtProblemContent">Problem Content</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit">Submit</button>
 		</div>
