@@ -1,7 +1,7 @@
 <?php
 include("userdetails.php");
 include("supportticket.php")
-$info = "Problem Submitted";
+$info = "";
 ?>
 <html>
   <head>
