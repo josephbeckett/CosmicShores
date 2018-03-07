@@ -31,7 +31,12 @@ $('.datepicker').pickadate({
     closeOnSelect: false // Close upon selecting a date,
   });
 
+$(document).ready(function() {
+	$('input#input_text, textarea#txtProblemDescription').characterCounter();
+});
 
+$('#txtProblemDescription').val('New Text');
+$('#txtProblemDescription').trigger('autoresize');
 
 // Password Validator
 
