@@ -1,5 +1,6 @@
 <?php
 include("userdetails.php");
+include("supportticket.php")
 $info = "Problem Submitted";
 ?>
 <html>
@@ -64,14 +65,14 @@ $info = "Problem Submitted";
             </ul>
         </div>
     </nav>
-	  <!-- Content -->
+    <!-- Content -->
     <div class="container font center">
         <div class="col s12 m12 l3">
 		<h3>Hello <?php echo $row["Username"]; ?></h3>
 		<h4>What is your problem?</h4>
 	</div>
     </div> 
-	  <!-- Support Form -->
+    <!-- Support Form -->
 	<form method="post">
 		<div class="container">
 			<div class="input-field">
@@ -86,11 +87,13 @@ $info = "Problem Submitted";
                 <textarea id="txtProblemContent" class="materialize-textarea" data-length="500"></textarea>
 				<label for="txtProblemContent">Problem Content</label>
 			</div>
+            <div class="input-field">
+				<input type="text" name="txtValidation" required data-length"100">
+				<label for="txtValidation">Enter Username or Email</label>
+			</div>
 			<button class="waves-effect waves-light btn" type="submit">Submit</button>
 		</div>
 	</form>
-	<?php echo $info; ?>
-
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
