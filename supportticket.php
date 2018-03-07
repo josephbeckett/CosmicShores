@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $mycurrentdate = date('Y-m-d H:i:s');
 
     $sql = "INSERT INTO Support (SupportID, PostTitle, PostDescription, PostContent, Validation, PostDate)
-    VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$myvalidation', '$mycurrentdate')";
+    VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$myvalidation', (now()))";
     if (mysqli_query($conn, $sql)) {
         $info = "Ticket successfully submitted";
     } else {
