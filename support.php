@@ -1,6 +1,6 @@
 <?php
 include("userdetails.php");
-include("supportticket.php")
+include("supportticket.php");
 $info = "";
 ?>
 <html>
