@@ -1,7 +1,6 @@
 <?php
 include("userdetails.php");
 include("supportticket.php");
-$info = "";
 ?>
 <html>
   <head>
@@ -80,11 +79,11 @@ $info = "";
 				<label for="txtProblemTitle">Problem Title</label>
 			</div>
 			<div class="input-field col s12">
-				<textarea id="txtProblemSubtitle" class="materialize-textarea"  data-length="200"></textarea>
+				<textarea name="txtProblemSubtitle" class="materialize-textarea"  data-length="200"></textarea>
 				<label for="txtProblemSubtitle">Problem Description</label>
 			</div>
             <div class="input-field col s12">
-                <textarea id="txtProblemContent" class="materialize-textarea" required data-length="500"></textarea>
+                <textarea name="txtProblemContent" class="materialize-textarea" required data-length="500"></textarea>
 				<label for="txtProblemContent">Problem Content</label>
 			</div>
             <div class="input-field">
