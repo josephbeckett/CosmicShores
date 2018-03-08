@@ -52,13 +52,13 @@ $info ="";
         <div class="container">
             <form action = "" method = "post">
                 <label>Username : </label> 
-                <input type = "text" name = "txtUsername" value = "<?php echo $row["txtUsername"]?>" class = "box"/><br /><br />
+                <input type = "text" name = "txtUsername" value = "<?php echo $row["Username"]?>" class = "box"/><br /><br />
                 <label>First Name :</label>
-                <input type = "text" name = "txtFirstName" value = "<?php echo $row["txtFirstName"]?>" class = "box"/><br /><br />
+                <input type = "text" name = "txtFirstName" value = "<?php echo $row["FirstName"]?>" class = "box"/><br /><br />
                 <label>Last Name :</label>
-                <input type = "text" name = "txtLastName" value = "<?php echo $row["txtLastName"]?>" class = "box"/><br /><br />
+                <input type = "text" name = "txtLastName" value = "<?php echo $row["LastName"]?>" class = "box"/><br /><br />
                 <label>Email :</label>
-                <input type = "text" name = "txtEmail" value = "<?php echo $row["txtEmail"]?>" class = "box"/><br /><br />
+                <input type = "text" name = "txtEmail" value = "<?php echo $row["Email"]?>" class = "box"/><br /><br />
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
                 <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>   
             </form>
