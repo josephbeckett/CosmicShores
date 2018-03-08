@@ -51,10 +51,14 @@ $info ="";
     <div class="section">
         <div class="container">
             <form action = "" method = "post">
-                <label>Username : <?php echo $row["Username"]?></label><br /><br />
-                <label>First Name :</label><input type = "text" name = "txtFirstName" class = "box"/><br /><br />
-                <label>Last Name :</label><input type = "text" name = "txtLastName" class = "box"/><br /><br />
-                <label>Email :</label><input type = "text" name = "txtEmail" class = "box"/><br /><br />
+                <label>Username : </label> 
+                <input type = "text" name = "txtUsername" value = "<?php echo $row["txtUsername"]?>" class = "box"/><br /><br />
+                <label>First Name :</label>
+                <input type = "text" name = "txtFirstName" value = "<?php echo $row["txtFirstName"]?>" class = "box"/><br /><br />
+                <label>Last Name :</label>
+                <input type = "text" name = "txtLastName" value = "<?php echo $row["txtLastName"]?>" class = "box"/><br /><br />
+                <label>Email :</label>
+                <input type = "text" name = "txtEmail" value = "<?php echo $row["txtEmail"]?>" class = "box"/><br /><br />
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
                 <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>   
             </form>
