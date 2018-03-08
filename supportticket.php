@@ -1,5 +1,6 @@
 <?php
 include("config.php");
+session_start();
 $info = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 // Support tickets are sent from form
