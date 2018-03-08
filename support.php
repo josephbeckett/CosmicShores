@@ -51,7 +51,7 @@ include("supportticket.php");
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="about.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="support.php">Support</a></li>
+                
                 <li><a href="login.php">Sign out</a></li>
                 
             </ul>

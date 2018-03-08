@@ -32,17 +32,17 @@ include("userdetails.php");
 			<img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
+                <li><a href ="loginhomepage.php">Dashboard</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="about.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="support.php">Support</a></li>
                 <li><a href="login.php">Sign out</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
+                <li><a href ="loginhomepage.php">Dashboard</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="about.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="support.php">Support</a></li>
                 <li><a href="login.php">Sign out</a></li>
             </ul>
         </div>
