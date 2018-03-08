@@ -10,11 +10,12 @@ function displayUser($conn, $login_user) {
     return $row;
 }
 function updateUser($conn, $login_user) {
+$myusername =mysqli_real_escape_string($conn,$_POST["txtUsername"]);
 $myfirstname = mysqli_real_escape_string($conn,$_POST["txtFirstName"]);
 $mylastname = mysqli_real_escape_string($conn,$_POST["txtLastName"]);
 $myemail = mysqli_real_escape_string($conn,$_POST["txtEmail"]);
 
-$sql = "UPDATE User SET FirstName = '$myfirstname', LastName = '$mylastname', Email =
+$sql = "UPDATE User SET Username = '$myusername', FirstName = '$myfirstname', LastName = '$mylastname', Email =
 '$myemail' WHERE CustomerID = '$_SESSION[login_user]' ";
 if (mysqli_query($conn, $sql)) {
     $info = "Updated User successfully ";
