@@ -79,7 +79,7 @@ include("supportticket.php");
 			</div>
 			<div class="input-field col s12">
 				<textarea name="txtProblemSubtitle" class="materialize-textarea"  data-length="200"></textarea>
-				<label for="txtProblemSubtitle">Problem Description</label>
+				<label for="txtProblemSubtitle">Problem Subtitle</label>
 			</div>
             <div class="input-field col s12">
                 <textarea name="txtProblemContent" class="materialize-textarea" required data-length="500"></textarea>
@@ -87,7 +87,7 @@ include("supportticket.php");
 			</div>
             <div class="input-field">
 				<input type="text" name="txtProblemValidation" required data-length"100">
-				<label for="txtProblemValidation">Enter Username or Email</label>
+				<label for="txtProblemValidation">Enter Email</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit">Submit</button>
 		</div>

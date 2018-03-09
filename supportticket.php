@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myproblemtitle = mysqli_real_escape_string($conn,$_POST["txtProblemTitle"]);
     $myproblemsubtitle = mysqli_real_escape_string($conn,$_POST["txtProblemSubtitle"]);
     $myproblemcontent = mysqli_real_escape_string($conn,$_POST["txtProblemContent"]);
-    $myvalidation = mysql_real_escape_string($conn,$_POST["txtProblemValidation"]);
+    $myvalidation = mysqli_real_escape_string($conn,$_POST["txtProblemValidation"]);
     //$mycurrentdate = date('Y-m-d H:i:s');
 
     $sql = "INSERT INTO Support (PostTitle, PostDescription, PostContent, PostValidation)
