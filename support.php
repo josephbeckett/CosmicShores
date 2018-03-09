@@ -1,5 +1,4 @@
 <?php
-include("userdetails.php");
 include("supportticket.php");
 ?>
 <html>
