@@ -86,8 +86,8 @@ include("supportticket.php");
 				<label for="txtProblemContent">Problem Content</label>
 			</div>
             <div class="input-field">
-				<input type="text" name="txtValidation" required data-length"100">
-				<label for="txtValidation">Enter Username or Email</label>
+				<input type="text" name="txtProblemValidation" required data-length"100">
+				<label for="txtProblemValidation">Enter Username or Email</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit">Submit</button>
 		</div>
