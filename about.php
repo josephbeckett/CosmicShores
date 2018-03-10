@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-content">
                         <p>Here is a collection of all the best selected photos from our members. Please enjoy.</p>
-						<a class="wave-effect btn" href="BestPhotos.php">See More</a>
+						<a class="wave-effect btn" href="bestphotos.php">See More</a>
                     </div>
                 </div>
             </div>
