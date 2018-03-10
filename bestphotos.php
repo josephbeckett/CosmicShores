@@ -79,26 +79,8 @@
     <!-- Footer -->
     <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge font" style="margin-top:128px"> 
         <h1 class="font">So, Do You Like What You See?</h1>
-        <a class="waves-effect waves-light btn" href="signup.html" target="_blank">Join Us</a>
+        <a class="waves-effect waves-light btn" href="signup.php" target="_blank">Join Us</a>
     </footer>
-	  
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal font">
-        <div class="modal-content">
-			<div class="container">
-				<div class="input-field">
-					<input type="text" id="username" required>
-					<label for="username">Username</label>
-				</div>
-				<div class="input-field">
-					<input type="password" id="password" required>
-					<label for="password">Password</label>
-				</div> 
-				<a class="waves-effect waves-light" type="submit">Login</a>
-			  </div>
-		</div>
-    </div>
-
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

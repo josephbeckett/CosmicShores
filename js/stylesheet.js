@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 // Index Page Loader 
 document.addEventListener("DOMContentLoaded", function(){
-	$('.preloader-background').delay(1000).fadeOut('slow');
+	$('.preloader-background').delay(500).fadeOut('slow');
 	
 	$('.preloader-wrapper')
 		.delay(1000)

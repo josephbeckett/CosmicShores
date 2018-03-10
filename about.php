@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-content">
                         <p>Here is a collection of all the best selected photos from our members. Please enjoy.</p>
-						<a class="wave-effect btn" href="BestPhotos.html">See More</a>
+						<a class="wave-effect btn" href="BestPhotos.php">See More</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="card-content">
                         <p>If you're interesting in become part of our astronomical society, then don't hesitate to sign up.</p>
-						<a class="wave-effect btn" href="signup.html">Sign Up</a>
+						<a class="wave-effect btn" href="signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -121,23 +121,6 @@
 		</li>
 	  </ul>
 	  </div>
-	  
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal font">
-        <div class="modal-content">
-			<div class="container">
-				<div class="input-field">
-					<input type="text" id="username" required>
-					<label for="username">Username</label>
-				</div>
-				<div class="input-field">
-					<input type="password" id="password" required>
-					<label for="password">Password</label>
-				</div> 
-				<a class="waves-effect waves-light" type="submit">Login</a>
-			  </div>
-		</div>
-    </div>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -23,6 +23,7 @@
   </head>
 
   <body>
+  
 <!-- Navbar -->
     <nav class="normalNav">
         <div class="nav-wrapper">
@@ -44,6 +45,7 @@
             </ul>
         </div>
     </nav>
+
 <!-- Parallax -->
     <div class="parallax-container">
         <div class="parallax"><img src="images/parallax1.jpeg"></div>
@@ -82,24 +84,6 @@
         </div>
     </div>
 	  
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal font">
-        <div class="modal-content">
-			<div class="container">
-				<div class="input-field">
-					<input type="text" id="username" required>
-					<label for="username">Username</label>
-				</div>
-				<div class="input-field">
-					<input type="password" id="password" required>
-					<label for="password">Password</label>
-				</div> 
-				<a class="waves-effect waves-light" type="submit">Login</a>
-			  </div>
-		</div>
-    </div>
-
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
