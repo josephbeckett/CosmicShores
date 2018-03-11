@@ -1,6 +1,6 @@
 <?php
 include("blogpost.php");
-include("userdetails.php");
+include("config.php");
 ?>
 <html>
   <head>
@@ -52,7 +52,35 @@ include("userdetails.php");
     </nav>
 	  <!-- Content -->
 
+      <?php
+        require_once("nbbc/nbbc.php");
 
+        $bbcode = new BBCode;
+
+        $sql = "SELECT * FROM blog ORDER BY id DESC";
+
+        $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+        $posts = "";
+
+        if (mysqli_num_rows($res) > 0) {
+            while($row = mysqli_fetch_assoc($res)) {
+                $id = $row['id'];
+                $title = $row['title'];
+                $content = $row['content'];
+                $date = $row['date'];
+
+                $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
+
+                $output = $bbcode->Parse($content);
+
+                $posts .= "<div><h2><a href='viewpost.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin</div>"; 
+            }
+            echo $posts
+        } else {
+            echo "There are no results to display!";
+        }
+      ?>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
