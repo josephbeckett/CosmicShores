@@ -1,9 +1,12 @@
 <?php
 include("blogpost.php");
 include("config.php");
+<<<<<<< HEAD
   if(isset($SESSION['CustomerID'])) {
     header("Location: login.php");
   }
+=======
+>>>>>>> e30ae430379bea5b7976010975edb4463e616f15
 ?>
 <html>
   <head>
@@ -52,9 +55,41 @@ include("config.php");
                 $content = $row['PostContent'];
                 $date = $row['PostDate'];
 
+<<<<<<< HEAD
                 $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
 
                 $output = $bbcode->Parse($content);
+=======
+      <?php
+        require_once("nbbc/nbbc.php");
+
+        $bbcode = new BBCode;
+
+        $sql = "SELECT * FROM blog ORDER BY id DESC";
+
+        $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+        $posts = "";
+
+        if (mysqli_num_rows($res) > 0) {
+            while($row = mysqli_fetch_assoc($res)) {
+                $id = $row['id'];
+                $title = $row['title'];
+                $content = $row['content'];
+                $date = $row['date'];
+
+                $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
+
+                $output = $bbcode->Parse($content);
+
+                $posts .= "<div><h2><a href='viewpost.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin</div>"; 
+            }
+            echo $posts
+        } else {
+            echo "There are no results to display!";
+        }
+      ?>
+>>>>>>> e30ae430379bea5b7976010975edb4463e616f15
 
                 $posts .= "<div><h2><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><h5>$date</h5>$admin</div>"; 
             }

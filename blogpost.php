@@ -3,6 +3,7 @@
     include("config.php");
 
     if(isset($_POST['post'])) {
+<<<<<<< HEAD
         $title = strip_tags($_POST['PostTitle']);
         $content = strip_tags($_POST['PostContent']);
 
@@ -78,3 +79,8 @@
     </form>
 </body>
 </html>
+=======
+        
+    }
+?>
+>>>>>>> e30ae430379bea5b7976010975edb4463e616f15
