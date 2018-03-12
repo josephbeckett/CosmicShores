@@ -48,10 +48,10 @@ include("config.php");
 
         if (mysqli_num_rows($res) > 0) {
             while($row = mysqli_fetch_assoc($res)) {
-                $id = $row['id'];
-                $title = $row['title'];
-                $content = $row['content'];
-                $date = $row['date'];
+                $id = $row['PostID'];
+                $title = $row['PostTitle'];
+                $content = $row['PostContent'];
+                $date = $row['PostDate'];
 
                 $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
 
