@@ -44,7 +44,7 @@ include("config.php");
 
         $sql = "SELECT * FROM blog ORDER BY id DESC";
 
-        $res = mysqli_query($conn, $sql) or die(mysqli_error());
+        $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
         $posts = "";
 
