@@ -6,8 +6,8 @@ $info = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    // username and password sent from form 
    
-   $myusername = mysqli_real_escape_string($_POST["txtUsername"]);
-   $mypassword = mysqli_real_escape_string($_POST["txtPassword"]); 
+   $myusername = mysqli_real_escape_string($conn, $_POST["txtUsername"]);
+   $mypassword = mysqli_real_escape_string($conn, $_POST["txtPassword"]); 
 
    $myusername = strip_tags($_POST["txtUsername"]);
    $mypassword = strip_tags($_POST["txtPassword"]); 
