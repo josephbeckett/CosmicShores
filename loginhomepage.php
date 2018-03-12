@@ -48,7 +48,7 @@ include("userdetails.php");
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="profile.php">Profile</a></li>
-                <li><a href="about.php">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="login.php">Sign out</a></li>
                 

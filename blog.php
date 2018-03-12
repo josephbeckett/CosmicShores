@@ -1,10 +1,13 @@
 <?php
 include("blogpost.php");
-include("userdetails.php");
+include("config.php");
+  if(isset($SESSION['CustomerID'])) {
+    header("Location: login.php");
+  }
 ?>
 <html>
   <head>
-	  <title>Dashboard</title>
+	  <title>Blog</title>
     <!--Import Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
     <!--Import Google Icon Font-->
@@ -28,32 +31,39 @@ include("userdetails.php");
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
-<!-- Header -->
-    <nav class="transparentBG z-depth-0">
-        <div class="nav-wrapper">
-			<img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href ="loginhomepage.php">Dashboard</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="about.php">Blog</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="login.php">Sign out</a></li>
-                
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href ="loginhomepage.php">Dashboard</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="login.php">Sign out</a></li>
-            </ul>
-        </div>
-    </nav>
+
 	  <!-- Content -->
+    <div class="center">
+      <?php
+        require_once("nbbc/nbbc.php");
 
+        $bbcode = new BBCode;
 
+        $sql = "SELECT * FROM blog ORDER BY PostID DESC";
 
+        $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+        $posts = "";
+
+        if (mysqli_num_rows($res) > 0) {
+            while($row = mysqli_fetch_assoc($res)) {
+                $id = $row['PostID'];
+                $title = $row['PostTitle'];
+                $content = $row['PostContent'];
+                $date = $row['PostDate'];
+
+                $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
+
+                $output = $bbcode->Parse($content);
+
+                $posts .= "<div><h2><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><h5>$date</h5>$admin</div>"; 
+            }
+            echo $posts;
+        } else {
+            echo "There are no results to display!";
+        }
+      ?>
+      </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

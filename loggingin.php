@@ -6,9 +6,15 @@ $info = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    // username and password sent from form 
    
-   $myusername = mysqli_real_escape_string($conn,$_POST["txtUsername"]);
-   $mypassword = mysqli_real_escape_string($conn,$_POST["txtPassword"]); 
-   
+   $myusername = mysqli_real_escape_string($_POST["txtUsername"]);
+   $mypassword = mysqli_real_escape_string($_POST["txtPassword"]); 
+
+   $myusername = strip_tags($_POST["txtUsername"]);
+   $mypassword = strip_tags($_POST["txtPassword"]); 
+
+   $myusername = stripslashes($myusername);
+   $mypassword = stripslashes($mypassword);
+
    $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername' and Password = '$mypassword'";
    $result = mysqli_query($conn,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
