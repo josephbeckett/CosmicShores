@@ -3,7 +3,7 @@
     include("config.php");
 
     if(isset($_POST['post'])) {
-<<<<<<< HEAD
+
         $title = strip_tags($_POST['PostTitle']);
         $content = strip_tags($_POST['PostContent']);
 
@@ -55,7 +55,6 @@
                 <li><a href="about.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="login.php">Sign out</a></li>
-                
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href ="loginhomepage.php">Dashboard</a></li>
@@ -79,8 +78,3 @@
     </form>
 </body>
 </html>
-=======
-        
-    }
-?>
->>>>>>> e30ae430379bea5b7976010975edb4463e616f15
