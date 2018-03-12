@@ -41,7 +41,7 @@ include("session.php");
 
         $bbcode = new BBCode;
 
-        $sql = "SELECT * FROM Blog ORDER BY id DESC";
+        $sql = "SELECT * FROM Blog ORDER BY PostID DESC";
 
         $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
