@@ -40,7 +40,7 @@ include("config.php");
 
         $bbcode = new BBCode;
 
-        $sql = "SELECT * FROM blog ORDER BY id DESC";
+        $sql = "SELECT * FROM Blog ORDER BY id DESC";
 
         $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 

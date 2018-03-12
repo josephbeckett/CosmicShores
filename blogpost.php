@@ -23,11 +23,10 @@
         if($title == "" || $content == "") {
             echo "Please complete your post!";
             return;
+        } else {
+            header("Location : blog.php");
         }
-
         mysqli_query($conn, $sql);
-
-        header("Location : blog.php");
     }
 ?>
 
