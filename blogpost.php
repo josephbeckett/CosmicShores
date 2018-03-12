@@ -2,6 +2,12 @@
     session_start();
     include("config.php");
 
+
+    if(isset($SESSION['CustomerID'])) {
+        header("Location: login.php");
+      }
+
+      
     if(isset($_POST['post'])) {
 
         $title = strip_tags($_POST['PostTitle']);
