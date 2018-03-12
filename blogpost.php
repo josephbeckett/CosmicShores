@@ -7,7 +7,7 @@
         header("Location: login.php");
       }
 
-      
+
     if(isset($_POST['post'])) {
 
         $title = strip_tags($_POST['PostTitle']);
@@ -18,7 +18,7 @@
 
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = "INSERT into blog (PostTitle, PostContent, PostDate) VALUES ('$title', '$content', '$date')";
+        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate) VALUES ('$title', '$content', '$date')";
 
         if($title == "" || $content == "") {
             echo "Please complete your post!";

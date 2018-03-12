@@ -28,15 +28,13 @@ include("config.php");
   <body>
 	  
 <!-- Video Background -->
-    <video playsinline autoplay muted loop id="bgvid">
-            
+    <video playsinline autoplay muted loop id="bgvid">         
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
 
 	  <!-- Content -->
     <div class="center">
-
       <?php
         require_once("nbbc/nbbc.php");
 
