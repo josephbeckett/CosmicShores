@@ -29,7 +29,7 @@ include("config.php");
 	  
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
-            <source src="video/fundo.webm" type="video/webm">
+            
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 

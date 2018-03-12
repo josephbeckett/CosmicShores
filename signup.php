@@ -36,7 +36,7 @@ $info = "";
     </div>
 <!-- Video Background -->
     <video muted playsinline autoplay loop id="bgvid">
-        <source src="video/fundo.webm" type="video/webm">
+        
         <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 <!-- Navbar -->

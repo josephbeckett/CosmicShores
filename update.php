@@ -24,7 +24,7 @@ $info ="";
 	  
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
-            <source src="video/fundo.webm" type="video/webm">
+            
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
@@ -36,7 +36,7 @@ $info ="";
             <ul class="right hide-on-med-and-down">
                 <li><a href ="loginhomepage.php">Dashboard</a></li>
                 <li><a href="profile.php">Profile</a></li>
-                <li><a href="about.php">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="login.php">Sign out</a></li>
             </ul>
