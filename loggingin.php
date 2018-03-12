@@ -9,8 +9,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($conn, $_POST["txtUsername"]);
    $mypassword = mysqli_real_escape_string($conn, $_POST["txtPassword"]); 
 
-   $myusername = strip_tags($_POST["txtUsername"]);
-   $mypassword = strip_tags($_POST["txtPassword"]); 
+   $myusername = strip_tags($conn, $_POST["txtUsername"]);
+   $mypassword = strip_tags($conn, $_POST["txtPassword"]); 
 
    $myusername = stripslashes($myusername);
    $mypassword = stripslashes($mypassword);
