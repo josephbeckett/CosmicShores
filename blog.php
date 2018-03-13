@@ -1,6 +1,5 @@
 <?php
 include("blogpost.php");
-include("config.php");
 include("session.php");
 
   if(isset($SESSION['CustomerID'])) {

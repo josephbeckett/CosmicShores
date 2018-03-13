@@ -10,8 +10,8 @@
 
     if(isset($_POST['post'])) {
 
-        $title = strip_tags($_POST['PostTitle']);
-        $content = strip_tags($_POST['PostContent']);
+        $title = strip_tags($conn, $_POST['PostTitle']);
+        $content = strip_tags($conn, $_POST['PostContent']);
 
         $title = mysqli_real_escape_string($conn, $title);
         $content = mysqli_real_escape_string($conn, $content);
