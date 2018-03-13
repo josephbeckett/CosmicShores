@@ -83,7 +83,11 @@
             echo "There are no results to display!";
         }
       ?>
-      </div>
+
+    <br />
+    
+    <button><a href="blogpost.php" target="_blank">Post</a></button>
+  </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
