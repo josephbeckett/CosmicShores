@@ -57,7 +57,7 @@ include("session.php");
 
                 $output = $bbcode->Parse($content);
 
-                $posts .= "<div><h2><a href='viewpost.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin</div>"; 
+                $posts .= "<div><h2><a href='blogpost.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin</div>"; 
             }
             echo $posts
         } else {
