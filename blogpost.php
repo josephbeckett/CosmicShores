@@ -2,10 +2,9 @@
     session_start();
     include("config.php");
 
-
     if(isset($SESSION['CustomerID'])) {
         header("Location: login.php");
-      }
+    }
 
 
     if(isset($_POST['post'])) {
@@ -64,15 +63,15 @@
                 </ul>
             </div>
         </nav>
-        <form action="blogpost.php" method="post">
+        <form action="blogpost.php" method="post" enctype="multipart/form-data">
             <div class="container">
                 <div class="input-field">
-                    <input placeholder="Post Title" type="text" name="PostTitle" required data-length"100">
+                    <input placeholder="Post Title" type="text" name="PostTitle" required data-length="100"><br /><br />
                 </div>
                 <div class="input-field col s12">
-                    <textarea placeholder="Post Content" name="PostContent" class="materialize-textarea" required data-length="500"></textarea>
+                    <textarea placeholder="Post Content" name="PostContent" class="materialize-textarea" required data-length="100000"></textarea><br />
                 </div>
-                <button class="waves-effect waves-light btn" name= "post" type="submit">Submit</button>
+                <button class="waves-effect waves-light btn" name="post" type="submit" value="Post"></button>
             </div>
         </form>
     </body>

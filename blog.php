@@ -1,5 +1,5 @@
 <?php
-include("session.php");
+  include("session.php");
 
   if(isset($SESSION['CustomerID'])) {
     header("Location: login.php");
