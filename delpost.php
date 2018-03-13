@@ -2,7 +2,7 @@
     session_start();
     include_once("config.php");
 
-    if(!isset($_SESSION['CustomerID'])) {
+    if(!isset($_SESSION['Username'])) {
         header("Location: login.php");
         return;
     }

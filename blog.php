@@ -86,7 +86,7 @@
 
     <br />
 
-    <button class="waves-effect waves-light btn"><a href="blogpost.php" target="_blank">Post</a></button>
+    <button class="waves-effect waves-light btn"><a href="blogpost.php">Post</a></button>
   </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
