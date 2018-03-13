@@ -9,17 +9,14 @@
 
     if(isset($_POST['post'])) {
 
-        $title1 = strip_tags($conn, $_POST['PostTitle']);
-        $content1 = strip_tags($conn, $_POST['PostContent']);
-
-        $title2 = mysqli_real_escape_string($conn, $title1);
-        $content2 = mysqli_real_escape_string($conn, $content1);
+        $title = mysqli_real_escape_string($conn, $_POST['PostTitle']);
+        $content = mysqli_real_escape_string($conn, $_POST['PostContent']);
 
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate) VALUES ('$title2', '$content2', '$date2')";
+        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate) VALUES ('$title', '$content', '$date')";
 
-        if($title2 == "" || $content2 == "") {
+        if($title == "" || $content == "") {
             echo "Please complete your post!";
             return;
         }
