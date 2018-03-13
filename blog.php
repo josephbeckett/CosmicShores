@@ -1,5 +1,4 @@
 <?php
-include("blogpost.php");
 include("session.php");
 
   if(isset($SESSION['CustomerID'])) {
@@ -31,7 +30,27 @@ include("session.php");
     <video playsinline autoplay muted loop id="bgvid">         
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
-
+    <!-- Header -->
+    <nav class="transparentBG z-depth-0">
+        <div class="nav-wrapper">
+            <img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href ="loginhomepage.php">Dashboard</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="login.php">Sign out</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href ="loginhomepage.php">Dashboard</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="login.php">Sign out</a></li>
+            </ul>
+        </div>
+    </nav>
 
 	  <!-- Content -->
     <div class="center">
@@ -57,7 +76,7 @@ include("session.php");
 
                 $output = $bbcode->Parse($content);
 
-                $posts .= "<div><h2><a href='blogpost.php?pid=$id'>$title</a></h2><h3>$date</h3><p>$output</p>$admin</div>"; 
+                $posts .= "<div><h2><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><h5>$date</h5>$admin</div>"; 
             }
             echo $posts;
         } else {
