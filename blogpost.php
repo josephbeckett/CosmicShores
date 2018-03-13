@@ -22,7 +22,7 @@
         }
         mysqli_query($conn, $sql);
 
-        header("Location : blog.php");
+        header("Location: blog.php");
     }
 ?>
 
@@ -44,7 +44,7 @@
         <video playsinline autoplay muted loop id="bgvid">         
                 <source src="images/CosmicShores.mp4" type="video/mp4">
         </video>
-        
+
         <!-- Header -->
         <nav class="transparentBG z-depth-0">
             <div class="nav-wrapper">
