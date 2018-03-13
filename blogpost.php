@@ -9,23 +9,23 @@
 
     if(isset($_POST['post'])) {
 
-        $title = strip_tags($conn, $_POST['PostTitle']);
-        $content = strip_tags($conn, $_POST['PostContent']);
+        $title1 = strip_tags($conn, $_POST['PostTitle']);
+        $content1 = strip_tags($conn, $_POST['PostContent']);
 
-        $title = mysqli_real_escape_string($conn, $title);
-        $content = mysqli_real_escape_string($conn, $content);
+        $title2 = mysqli_real_escape_string($conn, $title1);
+        $content2 = mysqli_real_escape_string($conn, $content1);
 
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate) VALUES ('$title', '$content', '$date')";
+        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate) VALUES ('$title2', '$content2', '$date2')";
 
-        if($title == "" || $content == "") {
+        if($title2 == "" || $content2 == "") {
             echo "Please complete your post!";
             return;
-        } else {
-            header("Location : blog.php");
         }
         mysqli_query($conn, $sql);
+
+        header("Location : blog.php");
     }
 ?>
 
