@@ -11,7 +11,7 @@
         header("Location: blog.php");
     } else {
         $pid = $_GET['pid'];
-        $sql = "DELETE FROM Blog WHERE id = $pid";
+        $sql = "DELETE FROM Blog WHERE PostID = $pid";
         mysqli_query($conn, $sql);
         header("Location: blog.php");
     }

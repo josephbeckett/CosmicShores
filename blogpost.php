@@ -74,7 +74,7 @@
                 <div class="input-field col s12">
                     <textarea placeholder="Post Content" name="PostContent" class="materialize-textarea" required data-length="100000"></textarea><br />
                 </div>
-                <button class="waves-effect waves-light btn" name="post" type="submit" value="Post"></button>
+                <a class="waves-effect waves-light btn" name="post" type="submit" value="Post">Post</a>
             </div>
         </form>
     </body>
