@@ -52,13 +52,13 @@ include("userdetails.php");
         <div class="container">
             <h2 class="flow-text">Profile Details for <?php echo $row["Username"]; ?></h2>
             <p1 class="flow-text"><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
-            <p1><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
-            <p1><?php echo "LastName: " . $row["LastName"] . "</br>"?></p1>
-            <p1><?php echo "Email: " . $row["Email"] . "</br>"?></p1>
-            <p1><?php echo "QuestionAnswer: " . $row["QuestionAnswer"] . "</br>"?></p1>
-            <p1><?php echo "DOB: " . $row["DOB"] . "</br>"?></p1>
-            <h2><a href="update.php">Update Details</a></h2>
-            <h2><a href = "login.php">Sign Out</a></h2>
+            <p1 class="flow-text"><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
+            <p1 class="flow-text"><?php echo "LastName: " . $row["LastName"] . "</br>"?></p1>
+            <p1 class="flow-text"><?php echo "Email: " . $row["Email"] . "</br>"?></p1>
+            <p1 class="flow-text"><?php echo "QuestionAnswer: " . $row["QuestionAnswer"] . "</br>"?></p1>
+            <p1 class="flow-text"><?php echo "DOB: " . $row["DOB"] . "</br>"?></p1>
+            <h2 class="flow-text"><a href="update.php">Update Details</a></h2>
+            <h2 class="flow-text"><a href = "login.php">Sign Out</a></h2>
         </div>
     </div>
 

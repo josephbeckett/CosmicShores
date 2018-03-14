@@ -6,13 +6,13 @@ $info ="";
   <head>
 	  <title>Update Profile</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Import  stylesheet.css-->
-    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/> 
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -21,10 +21,10 @@ $info ="";
   </head>
 <!-- Start of body -->
   <body>
-	  
+
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
-            
+
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
@@ -53,7 +53,7 @@ $info ="";
     <div class="section">
         <div class="container">
             <form action = "" method = "post">
-                <label>Username : </label> 
+                <label>Username : </label>
                 <input type = "text" name = "txtUsername" value = "<?php echo $row["Username"]?>" class = "box"/><br /><br />
                 <label>First Name :</label>
                 <input type = "text" name = "txtFirstName" value = "<?php echo $row["FirstName"]?>" class = "box"/><br /><br />
@@ -62,10 +62,10 @@ $info ="";
                 <label>Email :</label>
                 <input type = "text" name = "txtEmail" value = "<?php echo $row["Email"]?>" class = "box"/><br /><br />
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
-                <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>   
+                <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>
             </form>
-            <h2><a href="loginhomepage.php">Return to Home page</a></h2>
-            <h2><a href = "login.php">Sign Out</a></h2>
+            <h2 class="flow-text"><a href="loginhomepage.php">Return to Home page</a></h2>
+            <h2 class="flow-text"><a href = "login.php">Sign Out</a></h2>
             <div><?php echo $info; ?></div>
         </div>
     </div>
