@@ -12,6 +12,17 @@
 
     $pid = $_GET['pid'];
 
+
+    $sql_get = "SELECT * FROM Blog WHERE PostID = $pid";
+    $res = mysqli_query($conn, $sql_get);
+
+    if(mysqli_num_rows($res) > 0) {
+        while ($row = mysqli_fetch_array($res)) {
+            $title = $row['PostTitle'];
+            $content = $row['PostContent'];
+        }
+    }
+
     if(isset($_POST['update'])) {
         $title = mysqli_real_escape_string($conn, $_POST['PostTitle']);
         $content = mysqli_real_escape_string($conn, $_POST['PostContent']);
@@ -22,6 +33,8 @@
         mysqli_query($conn, $sql);
         header("Location : blog.php");
     }
+
+
 ?>
 
 <html>
@@ -65,15 +78,7 @@
         <?php
 
 
-        $sql_get = "SELECT * FROM Blog WHERE PostID = $pid";
-        $res = mysqli_query($conn, $sql_get);
 
-        if(mysqli_num_rows($res) > 0) {
-            while ($row = mysqli_fetch_array($res)) {
-                $title = $row['PostTitle'];
-                $content = $row['PostContent'];
-            }
-        }
         $form = <<<DELIMETER
             <form action='editpost.php?pid={$row['pid']} method='post' enctype='multipart/form-data'>
             <div class='container'>
