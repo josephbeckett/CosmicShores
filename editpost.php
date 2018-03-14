@@ -22,6 +22,7 @@
         $date = date('l jS \of F Y h:i:s A');
 
         $sql = "UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID=$pid";
+
         mysqli_query($conn, $sql);
         header("Location : blog.php");
     }
@@ -79,17 +80,10 @@
             }
         }
 
+
 		echo "<form action='editpost.php?pid=$pid' method='update' enctype='multipart/form-data'>";
+        echo "<div class='container'><div class='input-field'><input type='text' name='PostTitle' required data-length='100' value='$title'/><br /><br /></div><div class='input-field col s12'><textarea name='PostContent' class='materialize-textarea' required data-length='100000' value='$content'/></textarea><br /></div>"
         ?>
-                
-            
-            <div class="container">
-				<div class="input-field">
-					<input type="text" name="PostTitle" required data-length="100" value="<?php echo $title; ?>"/><br /><br />
-				</div>
-				<div class="input-field col s12">
-					<textarea name="PostContent" class="materialize-textarea" required data-length="100000" value="<?php echo $content; ?>"/></textarea><br />
-				</div>
 				<button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
         </form>
