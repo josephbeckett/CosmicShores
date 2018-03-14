@@ -24,9 +24,8 @@
             echo "Please complete your post!";
             return;
         }
-        
-        header("Location : blog.php");
         mysqli_query($conn, $sql);
+        header("Location : blog.php");
     }
 ?>
 
