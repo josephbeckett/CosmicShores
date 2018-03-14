@@ -79,22 +79,18 @@
             }
         }
 
-        $form = <<<DELIMETER
-            <form action='editpost.php?pid={$row['pid']} method='update' enctype='multipart/form-data'>
-            <div class='container'>
-            <div class='input-field'>
-            <input placeholder='Post Title' type='text' name='PostTitle' required data-length='100' value={$row['PostTitle']}><br /><br />
-            </div>
-            <div class='input-field col s12'>
-            <textarea placeholder='Post Content' name='PostContent' class='materialize-textarea' required data-length='100000' value={$row['PostContent']}></textarea><br />
-            </div>
-DELIMETER;
-        echo $form;
-        echo $pid;
+		echo "<form action='editpost.php?pid=$pid' method='update' enctype='multipart/form-data'>";
         ?>
                 
-
-                <button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
+            
+            <div class="container">
+				<div class="input-field">
+					<input type="text" name="PostTitle" required data-length="100" value="<?php echo $title; ?>"/><br /><br />
+				</div>
+				<div class="input-field col s12">
+					<textarea name="PostContent" class="materialize-textarea" required data-length="100000" value="<?php echo $content; ?>"></textarea><br />
+				</div>
+				<button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
         </form>
     </body>
