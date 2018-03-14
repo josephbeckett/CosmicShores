@@ -13,12 +13,8 @@
     $pid = $_GET['pid'];
 
     if(isset($_POST['update'])) {
-
-        $title = strip_tags($conn, $_POST['PostTitle']);
-        $content = strip_tags($conn, $_POST['PostContent']);
-
-        $title = mysqli_real_escape_string($conn, $title);
-        $content = mysqli_real_escape_string($conn, $content);
+        $title = mysqli_real_escape_string($conn, $_POST['PostTitle']);
+        $content = mysqli_real_escape_string($conn, $_POST['PostContent']);
 
         $date = date('l jS \of F Y h:i:s A');
 
@@ -27,9 +23,9 @@
         if($title == "" || $content == "") {
             echo "Please complete your post!";
             return;
-        } else {
-            header("Location : blog.php");
         }
+        
+        header("Location : blog.php");
         mysqli_query($conn, $sql);
     }
 ?>
