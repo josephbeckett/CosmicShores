@@ -71,14 +71,14 @@
             }
         }
 
-        echo "<form action='editpost.php?pid=$pid' method='post' enctype='multipart/form-data'>"
-        echo "<div class='container'>"
-        echo "<div class='input-field'>"
-        echo "<input placeholder='Post Title' type='text' name='PostTitle' required data-length='100' value='$title'><br /><br />"
-        echo "</div>"
-        echo "<div class='input-field col s12'>"
-        echo "<textarea placeholder='Post Content' name='PostContent' class='materialize-textarea' required data-length='100000' value='$content'></textarea><br />"
-        echo "</div>"
+        echo "<form action='editpost.php?pid=$pid' method='post' enctype='multipart/form-data'>";
+        echo "<div class='container'>";
+        echo "<div class='input-field'>";
+        echo "<input placeholder='Post Title' type='text' name='PostTitle' required data-length='100' value='$title'><br /><br />";
+        echo "</div>";
+        echo "<div class='input-field col s12'>";
+        echo "<textarea placeholder='Post Content' name='PostContent' class='materialize-textarea' required data-length='100000' value='$content'></textarea><br />";
+        echo "</div>";
 
         ?>
 
