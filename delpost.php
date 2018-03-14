@@ -2,10 +2,10 @@
 session_start();
 include_once('config.php');
 
-if (!isset($_SESSION['Username'])) {
+/*if (!isset($_SESSION['Username'])) {
     header('Location: login.php');
     return;
-}
+}*/
 
 if (!isset($_GET['pid'])) {
     header('Location: blog.php');
