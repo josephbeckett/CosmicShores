@@ -5,13 +5,13 @@ include("userdetails.php");
   <head>
 	  <title>Profile</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Import  stylesheet.css-->
-    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/> 
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -20,7 +20,7 @@ include("userdetails.php");
   </head>
 <!-- Start of body -->
   <body>
-	  
+
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
             <source src="images/CosmicShores.mp4" type="video/mp4">
@@ -50,8 +50,8 @@ include("userdetails.php");
 	  <!-- Content -->
     <div class="section">
         <div class="container">
-            <h2>Profile Details for <?php echo $row["Username"]; ?></h2>
-            <p1><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
+            <h2 class="flow-text">Profile Details for <?php echo $row["Username"]; ?></h2>
+            <p1 class="flow-text"><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
             <p1><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
             <p1><?php echo "LastName: " . $row["LastName"] . "</br>"?></p1>
             <p1><?php echo "Email: " . $row["Email"] . "</br>"?></p1>
