@@ -70,15 +70,17 @@
                 $content = $row['PostContent'];
             }
         }
-
-        echo "<form action='editpost.php?pid=$pid' method='post' enctype='multipart/form-data'>";
-        echo "<div class='container'>";
-        echo "<div class='input-field'>";
-        echo "<input placeholder='Post Title' type='text' name='PostTitle' required data-length='100' value='$title'><br /><br />";
-        echo "</div>";
-        echo "<div class='input-field col s12'>";
-        echo "<textarea placeholder='Post Content' name='PostContent' class='materialize-textarea' required data-length='100000' value='$content'></textarea><br />";
-        echo "</div>";
+        $form = <<<DELIMETER
+            <form action='editpost.php?pid={$row['pid']} method='post' enctype='multipart/form-data'>
+            <div class='container'>
+            <div class='input-field'>
+            <input placeholder='Post Title' type='text' name='PostTitle' required data-length='100' value={$row['title']}><br /><br />
+            </div>
+            <div class='input-field col s12'>
+            <textarea placeholder='Post Content' name='PostContent' class='materialize-textarea' required data-length='100000' value={$row['content']}></textarea><br />
+            </div>
+DELIMETER;
+        echo $form;
 
         ?>
 
