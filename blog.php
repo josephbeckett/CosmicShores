@@ -76,8 +76,8 @@
 
                 $output = $bbcode->Parse($content);
 
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><h5 class='flow-text'>$date</h5>$admin</div>"; 
-            }
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><h6 class='flow-text'>$date</h6>$admin</div>"; 
+            } 
             echo $posts;
         } else {
             echo "There are no results to display!";
