@@ -2,7 +2,7 @@
     session_start();
     include("config.php");
 
-/*    if(!isset($SESSION['CustomerID'])) {
+/*    if(!isset($_SESSION['CustomerID'])) {
         header("Location: login.php");
     }*/
 
@@ -29,7 +29,7 @@
 
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = "UPDATE Blog SET PostTitle ='$title', PostContent ='$content', PostDate ='$date' WHERE PostID=$pid";
+        $sql = "UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID=$pid";
         mysqli_query($conn, $sql);
         header("Location : blog.php");
     }
