@@ -65,11 +65,11 @@
         <?php
 
 
-        $sql_get = "SELECT * FROM Blog WHERE PostID = $pid LIMIT 1";
+        $sql_get = "SELECT * FROM Blog WHERE PostID = $pid";
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {
-            while ($row = mysqli_fetch_assoc($res)) {
+            while ($row = mysqli_fetch_array($res)) {
                 $title = $row['PostTitle'];
                 $content = $row['PostContent'];
             }
