@@ -73,7 +73,7 @@
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {
-            while ($row = mysqli_fetch_array($res)) {
+            while ($row = mysqli_fetch_assoc($res)) {
                 $title = $row['PostTitle'];
                 $content = $row['PostContent'];
             }
@@ -90,8 +90,9 @@
             </div>
 DELIMETER;
         echo $form;
-
+        echo $pid;
         ?>
+                
 
                 <button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
