@@ -3,7 +3,7 @@
   <head>
 	  <title>Gallery</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -23,7 +23,7 @@
   </head>
 
   <body>
-  
+
 <!-- Navbar -->
     <nav class="normalNav">
         <div class="nav-wrapper">
@@ -52,7 +52,7 @@
     </div>
     <div class="section">
         <div class="row container">
-            <h2 class="header">DSLR Camera Photos</h2>
+            <h2 class="header flow-text">DSLR Camera Photos</h2>
             <a href="DLSRPhotos.html"class="waves-effect waves-light btn">See More</a>
         </div>
     </div>
@@ -61,7 +61,7 @@
     </div>
     <div class="section">
         <div class="row container">
-            <h2 class="header">Normal Telescope Photos</h2>
+            <h2 class="header flow-text">Normal Telescope Photos</h2>
             <a href="NormalTelescopePhotos.html" class="waves-effect waves-light btn">See More</a>
         </div>
     </div>
@@ -70,7 +70,7 @@
     </div>
     <div class="section">
         <div class="row container">
-            <h2 class="header">Refraction Telescope</h2>
+            <h2 class="header flow-text">Refraction Telescope</h2>
             <a href="RefractionPhotos.html" class="waves-effect waves-light btn">See More</a>
         </div>
     </div>
@@ -79,11 +79,11 @@
     </div>
     <div class="section ">
         <div class="row container">
-            <h2 class="header">Reflection Telescope</h2>
+            <h2 class="header flow-text">Reflection Telescope</h2>
             <a href="ReflectionPhotos.html" class="waves-effect waves-light btn">See More</a>
         </div>
     </div>
-	  
+
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
