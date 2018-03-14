@@ -80,7 +80,7 @@
         }
 
         $form = <<<DELIMETER
-            <form action='editpost.php?pid={$row['pid']} method='post' enctype='multipart/form-data'>
+            <form action='editpost.php?pid={$row['pid']} method='update' enctype='multipart/form-data'>
             <div class='container'>
             <div class='input-field'>
             <input placeholder='Post Title' type='text' name='PostTitle' required data-length='100' value={$row['PostTitle']}><br /><br />
