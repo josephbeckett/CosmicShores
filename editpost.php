@@ -88,7 +88,7 @@
 					<input type="text" name="PostTitle" required data-length="100" value="<?php echo $title; ?>"/><br /><br />
 				</div>
 				<div class="input-field col s12">
-					<textarea name="PostContent" class="materialize-textarea" required data-length="100000" value="<?php echo $content; ?>"></textarea><br />
+					<textarea name="PostContent" class="materialize-textarea" required data-length="100000" value="<?php echo $content; ?>"/></textarea><br />
 				</div>
 				<button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
