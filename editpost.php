@@ -82,7 +82,7 @@
 
         ?>
 
-                <button class="waves-effect waves-light btn" name="update" type="submit" value="Update"></button>
+                <button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
         </form>
     </body>
