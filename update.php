@@ -80,16 +80,6 @@ $info ="";
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <select name="txtQuestionAnswer" value="<?php echo $row["QuestionAnswer"] ?>">
-                                <option value="Beginner">Beginner</option>
-                                <option value="Novice">Novice</option>
-                                <option value="Hobbyist">Hobbyist</option>
-                                <option value="Competent">Competent</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
                             <input name="txtDOB" type="text" class="datepicker" value="<?php echo $row["DOB"] ?>">
                             <label for="txtDOB" data-error="wrong" data-success="right">Date Of Birth</label>
                         </div>
