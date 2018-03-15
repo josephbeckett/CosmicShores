@@ -10,11 +10,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($conn,$_POST["txtUsername"]);
     $mypassword = mysqli_real_escape_string($conn,$_POST["txtPassword"]);
     $myemail = mysqli_real_escape_string($conn,$_POST["txtEmail"]);
-    $myQuestionAnswer = mysqli_real_escape_string($conn,$_POST["txtQuestionAnswer"]);
-    $myDOB = mysqli_real_escape_string($conn,$_POST["txtDOB"]);
+    $myquestionqnswer = mysqli_real_escape_string($conn,$_POST["txtQuestionAnswer"]);
+    $mydob = mysqli_real_escape_string($conn,$_POST["txtDOB"]);
 
     $sql = "INSERT INTO User (FirstName, LastName, Username, Password, Email, QuestionAnswer, DOB)
-    VALUES ('$myfirstname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myQuestionAnswer', '$myDOB')";
+    VALUES ('$myfirstname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myquestionanswer', '$mydob')";
     if (mysqli_query($conn, $sql)) {
         $info = "User Created Successfully!";
     } else {

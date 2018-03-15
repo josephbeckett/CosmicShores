@@ -51,14 +51,14 @@ include("userdetails.php");
     <div class="section">
         <div class="container">
             <div class="col s12 m4 l8">
-            <h2 class="flow-text">Profile Details for <?php echo $row["Username"]; ?></h2>
-            <p1 class="flow-text"><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
-            <p1 class="flow-text"><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
-            <p1 class="flow-text"><?php echo "LastName: " . $row["LastName"] . "</br>"?></p1>
-            <p1 class="flow-text"><?php echo "Email: " . $row["Email"] . "</br>"?></p1>
-            <p1 class="flow-text"><?php echo "Photography Level:" . $row["QuestionAnswer"] . "</br>"?></p1>
-            <p1 class="flow-text"><?php echo "DOB: " . $row["DOB"] . "</br>"?></p1>
-            <h2 class="flow-text"><a href="update.php">Update Details</a></h2>
+                <h2 class="flow-text">Profile Details for <?php echo $row["Username"]; ?></h2>
+                <p1 class="flow-text"><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
+                <p1 class="flow-text"><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
+                <p1 class="flow-text"><?php echo "LastName: " . $row["LastName"] . "</br>"?></p1>
+                <p1 class="flow-text"><?php echo "Email: " . $row["Email"] . "</br>"?></p1>
+                <p1 class="flow-text"><?php echo "Photography Level: " . $row["QuestionAnswer"] . "</br>"?></p1>
+                <p1 class="flow-text"><?php echo "DOB: " . $row["DOB"] . "</br>"?></p1>
+                <h2 class="flow-text"><a href="update.php">Update Details</a></h2>
             </div>
         </div>
     </div>
