@@ -64,7 +64,7 @@
         </nav>
         <?php
 
-        $sql_get = "SELECT * FROM Blog WHERE PostID=$pid";
+        $sql_get = "SELECT PostTitle, PostContent FROM Blog WHERE PostID=$pid";
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {
@@ -76,7 +76,9 @@
 
 
 		echo "<form action='editpost.php?pid=$pid' method='update' enctype='multipart/form-data'>";
-        echo "<div class='container'><div class='input-field'><input type='text' name='PostTitle' required data-length='100' value='$title'/><br /><br /></div><div class='input-field col s12'><textarea name='PostContent' class='materialize-textarea' required data-length='100000' value='$content'/></textarea><br /></div>"
+        echo "<div class='container'><div class='input-field'><input type='text' name='PostTitle' required data-length='100' value='$title'/><br /><br />
+        </div><div class='input-field col s12'><textarea name='PostContent' class='materialize-textarea' required data-length='5000' value='$content'/>
+        </textarea><br /></div>"
         ?>
 				<button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
