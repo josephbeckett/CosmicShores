@@ -67,11 +67,16 @@
                     <label for="PostTitle">Title</label>
                 </div>
                 <div class="input-field col s12">
-                    <textarea placeholder="Post Content" name="PostContent" class="materialize-textarea" required data-length="100000"></textarea><br />
+                    <textarea name="PostContent" class="materialize-textarea" required data-length="100000"></textarea><br />
                     <label for="PostContent">Content</label>
                 </div>
                 <button class="waves-effect waves-light btn" name="post" type="submit" value="Post">Post</button>
             </div>
         </form>
+        
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/stylesheet.js"></script>
     </body>
 </html>
