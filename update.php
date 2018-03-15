@@ -82,7 +82,7 @@ $info ="";
                         <div class="input-field col s12">
                             <label>Photography Level: </label>
                             <select name="txtQuestionAnswer">
-                                <option value="<?php echo $row["QuestionAnswer"] ?>" disabled selected></option>
+                                <option value="<?php echo $row["QuestionAnswer"] ?>"selected></option>
                                 <option value="Beginner">Beginner</option>
                                 <option value="Novice">Novice</option>
                                 <option value="Hobbyist">Hobbyist</option>
