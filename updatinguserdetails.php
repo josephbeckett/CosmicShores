@@ -19,6 +19,7 @@ $sql = "UPDATE User SET Username = '$myusername', FirstName = '$myfirstname', La
 '$myemail' WHERE CustomerID = '$_SESSION[login_user]' ";
 if (mysqli_query($conn, $sql)) {
     $info = "Updated User successfully ";
+    header("Location: profile.php");
 } else {
     $info = "Error updating User: ". mysqli_error($conn);
 }
@@ -46,5 +47,5 @@ else
     $row = displayUser($conn, $_SESSION["login_user"]);
 }
 mysqli_close($conn);
-header("Location: profile.php");
+
 ?>
