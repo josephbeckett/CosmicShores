@@ -80,8 +80,7 @@ $info ="";
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <select name="txtQuestionAnswer">
-                                <option value="<?php echo $row["QuestionAnswer"] ?>"selected></option>
+                            <select name="txtQuestionAnswer" value="<?php echo $row["QuestionAnswer"] ?>">
                                 <option value="Beginner">Beginner</option>
                                 <option value="Novice">Novice</option>
                                 <option value="Hobbyist">Hobbyist</option>
