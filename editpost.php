@@ -1,10 +1,5 @@
 <?php
-    session_start();
-    include("config.php");
-
-/*    if(!isset($_SESSION['CustomerID'])) {
-        header("Location: login.php");
-    }*/
+    include("session.php");
 
     if(!isset($_GET['pid'])) {
         header("Location: blog.php");

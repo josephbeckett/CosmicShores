@@ -1,11 +1,5 @@
 <?php
-    session_start();
-    include("config.php");
-
-    if(isset($_SESSION['CustomerID'])) {
-        header("Location: login.php");
-    }
-
+    include("session.php");
 
     if(isset($_POST['post'])) {
 

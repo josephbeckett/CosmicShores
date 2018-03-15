@@ -1,4 +1,8 @@
+<?php
+    include("session.php");
+    
 
+?>
 <html>
   <head>
 	  <title>Gallery</title>
