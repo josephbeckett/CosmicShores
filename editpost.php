@@ -16,7 +16,7 @@
 
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = ("UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID=$pid");
+        $sql = "UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID=$pid";
         mysqli_query($conn, $sql);
         header("Location : blog.php");
     }
@@ -64,7 +64,7 @@
         </nav>
         <?php
 
-        $sql_get = "SELECT * FROM Blog WHERE PostID = $pid";
+        $sql_get = "SELECT * FROM Blog WHERE PostID=$pid";
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {

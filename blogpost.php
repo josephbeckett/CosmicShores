@@ -63,10 +63,12 @@
         <form action="blogpost.php" method="post" enctype="multipart/form-data">
             <div class="container">
                 <div class="input-field">
-                    <input placeholder="Post Title" type="text" name="PostTitle" required data-length="100"><br /><br />
+                    <input type="text" name="PostTitle" required data-length="100"><br /><br />
+                    <label for="PostTitle">Title</label>
                 </div>
                 <div class="input-field col s12">
                     <textarea placeholder="Post Content" name="PostContent" class="materialize-textarea" required data-length="100000"></textarea><br />
+                    <label for="PostContent">Content</label>
                 </div>
                 <button class="waves-effect waves-light btn" name="post" type="submit" value="Post">Post</button>
             </div>
