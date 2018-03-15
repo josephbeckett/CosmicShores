@@ -38,14 +38,14 @@ $info ="";
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="login.php">Sign out</a></li>
+                <li><a href="logout.php">Sign out</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href ="loginhomepage.php">Dashboard</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="login.php">Sign out</a></li>
+                <li><a href="logout.php">Sign out</a></li>
             </ul>
         </div>
     </nav>
@@ -64,8 +64,6 @@ $info ="";
                 <button class="waves-effect waves-light btn" type="submit" name="update">Update</button>
                 <button class="waves-effect waves-light btn" type="submit" name="delete">Delete</button>
             </form>
-            <h2 class="flow-text"><a href="loginhomepage.php">Return to Home page</a></h2>
-            <h2 class="flow-text"><a href = "login.php">Sign Out</a></h2>
             <div><?php echo $info; ?></div>
         </div>
     </div>

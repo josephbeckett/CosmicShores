@@ -36,20 +36,21 @@ include("userdetails.php");
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="login.php">Sign out</a></li>
+                <li><a href="logout.php">Sign out</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href ="loginhomepage.php">Dashboard</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="login.php">Sign out</a></li>
+                <li><a href="logout.php">Sign out</a></li>
             </ul>
         </div>
     </nav>
 	  <!-- Content -->
     <div class="section">
         <div class="container">
+            <div class="col s12 m4 l8">
             <h2 class="flow-text">Profile Details for <?php echo $row["Username"]; ?></h2>
             <p1 class="flow-text"><?php echo "Username: " . $row["Username"] . "</br>"?></p1>
             <p1 class="flow-text"><?php echo "FirstName: " . $row["FirstName"] . "</br>"?></p1>
@@ -58,7 +59,7 @@ include("userdetails.php");
             <p1 class="flow-text"><?php echo "QuestionAnswer: " . $row["QuestionAnswer"] . "</br>"?></p1>
             <p1 class="flow-text"><?php echo "DOB: " . $row["DOB"] . "</br>"?></p1>
             <h2 class="flow-text"><a href="update.php">Update Details</a></h2>
-            <h2 class="flow-text"><a href = "login.php">Sign Out</a></h2>
+            </div>
         </div>
     </div>
 
