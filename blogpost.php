@@ -2,7 +2,7 @@
     session_start();
     include("config.php");
 
-    if(isset($SESSION['CustomerID'])) {
+    if(isset($_SESSION['CustomerID'])) {
         header("Location: login.php");
     }
 
@@ -55,14 +55,14 @@
                     <li><a href="profile.php">Profile</a></li>
                     <li><a href="blog.php">Blog</a></li>
                     <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="login.php">Sign out</a></li>
+                    <li><a href="logout.php">Sign out</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href ="loginhomepage.php">Dashboard</a></li>
                     <li><a href="profile.php">Profile</a></li>
                     <li><a href="blog.php">Blog</a></li>
                     <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="login.php">Sign out</a></li>
+                    <li><a href="logout.php">Sign out</a></li>
                 </ul>
             </div>
         </nav>
