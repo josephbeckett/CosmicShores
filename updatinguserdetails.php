@@ -46,4 +46,5 @@ else
     $row = displayUser($conn, $_SESSION["login_user"]);
 }
 mysqli_close($conn);
+header("Location : profile.php");
 ?>
