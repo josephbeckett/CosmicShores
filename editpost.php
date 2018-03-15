@@ -16,11 +16,7 @@
 
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = $conn->prepare('UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID='$pid'');
-        $sql ->execute(array(
-            'PostTitle' => $title,
-            'PostContent' => $content
-        ))
+        $sql = ("UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID=$pid");
         mysqli_query($conn, $sql);
         header("Location : blog.php");
     }
