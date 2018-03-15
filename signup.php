@@ -67,17 +67,17 @@ $info = "";
                 <form class="col s12" action="" method="post">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input name="txtFirstName" type="text">
+                            <input name="txtFirstName" type="text" required>
                             <label for="txtFirstName">First Name</label>
                         </div>
                         <div class="input-field col s6">
-                            <input name="txtLastName" type="text">
+                            <input name="txtLastName" type="text" required>
                             <label for="txtLastName">Last Name</label>
                         </div>
                     </div>
 					<div class="row">
                         <div class="input-field col s12">
-                            <input class="validate" name="txtUsername" type="text">
+                            <input class="validate" name="txtUsername" type="text" required>
                             <label for="txtUsername">Username</label>
                         </div>
                     </div>
@@ -98,13 +98,13 @@ $info = "";
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="txtEmail" type="email" class="validate">
+                            <input name="txtEmail" type="email" class="validate" required>
                             <label for="txtEmail" data-error="wrong" data-success="right">Email</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <select name="txtQuestionAnswer">
+                            <select name="txtQuestionAnswer" required>
                                 <option value="" disabled selected>What skill level are you at Photography?</option>
                                 <option value="Beginner">Beginner</option>
                                 <option value="Novice">Novice</option>
@@ -116,7 +116,7 @@ $info = "";
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="txtDOB" type="text" class="datepicker">
+                            <input name="txtDOB" type="text" class="datepicker" required>
                             <label for="txtDOB" data-error="wrong" data-success="right">Date Of Birth</label>
                         </div>
                     </div>
