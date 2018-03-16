@@ -7,16 +7,11 @@
 
     $pid = $_GET['pid'];
 
-
-
-
     if(isset($_POST['update'])) {
         $title = mysqli_real_escape_string($conn, $_POST['PostTitle']);
         $content = mysqli_real_escape_string($conn, $_POST['PostContent']);
 
-        $date = date('l jS \of F Y h:i:s A');
-
-        $sql = "UPDATE Blog SET PostTitle='$title', PostContent='$content', PostDate='$date' WHERE PostID=$pid";
+        $sql = "UPDATE Blog SET PostTitle='$title', PostContent='$content' WHERE PostID=$pid";
         mysqli_query($conn, $sql);
         header("Location: blog.php");
     }
@@ -64,7 +59,7 @@
         </nav>
         <?php
 
-        $sql_get = "SELECT PostTitlle, PostContent FROM Blog WHERE PostID=$pid";
+        $sql_get = "SELECT PostTitle, PostContent FROM Blog WHERE PostID=$pid";
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {
@@ -75,7 +70,7 @@
         }
 
 
-		echo "<form action='editpost.php?pid=$pid' method='update' enctype='multipart/form-data'>";
+		echo "<form action='editpost.php?pid=$pid' method='post' enctype='multipart/form-data'>";
         echo "<div class='container'><div class='input-field'><input type='text' name='PostTitle' required data-length='100' value='$title'/><br /><br />"
         echo "</div><div class='input-field col s12'><textarea name='PostContent' class='materialize-textarea' required data-length='5000' value='$content'/></textarea><br /></div>"
         ?>
