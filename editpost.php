@@ -64,7 +64,7 @@
         </nav>
         <?php
 
-        $sql_get = "SELECT * FROM Blog WHERE PostID=$pid";
+        $sql_get = "SELECT PostTitlle, PostContent FROM Blog WHERE PostID=$pid";
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {
