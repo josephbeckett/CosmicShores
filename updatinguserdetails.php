@@ -2,7 +2,7 @@
 include("session.php");
 $info ="";
 function displayUser($conn, $login_user) {
-    $sql = "SELECT CustomerID, Username, Password, FirstName, LastName, Email, QuestionAnswer, DOB FROM User
+    $sql = "SELECT CustomerID, Username, Password, FirstName, LastName, Email, DOB FROM User
     WHERE CustomerID = '$login_user' ";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -14,11 +14,10 @@ $myusername =mysqli_real_escape_string($conn,$_POST["txtUsername"]);
 $myfirstname = mysqli_real_escape_string($conn,$_POST["txtFirstName"]);
 $mylastname = mysqli_real_escape_string($conn,$_POST["txtLastName"]);
 $myemail = mysqli_real_escape_string($conn,$_POST["txtEmail"]);
-$myquestionanswer = mysqli_real_escape_string($conn, $_POST["txtQuestionAnswer"]);
 $mydob = mysqli_real_escape_string($conn, $_POST["txtDOB"]);
 
 $sql = "UPDATE User SET Username = '$myusername', FirstName = '$myfirstname', LastName = '$mylastname', Email =
-'$myemail', QuestionAnswer = '$myquestionanswer', DOB = '$mydob' WHERE CustomerID = '$_SESSION[login_user]' ";
+'$myemail', DOB = '$mydob' WHERE CustomerID = '$_SESSION[login_user]' ";
 if (mysqli_query($conn, $sql)) {
     $info = "Updated User successfully ";
     header("Location: profile.php");
