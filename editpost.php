@@ -72,7 +72,7 @@
 
 		echo "<form action='editpost.php?pid=$pid' method='post' enctype='multipart/form-data'>";
         echo "<div class='container'><div class='input-field'><input type='text' name='PostTitle' required data-length='100' value='$title'/><br /><br />";
-        echo "</div><div class='input-field col s12'><textarea name='PostContent' class='materialize-textarea' required data-length='5000'/><?php echo $content; ?></textarea><br /></div>";
+        echo "</div><div class='input-field col s12'><textarea name='PostContent' class='materialize-textarea' required data-length='5000'/>$content</textarea><br /></div>";
         ?>
 				<button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
             </div>
