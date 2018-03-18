@@ -16,9 +16,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $customerpassword = $row['Password'];
    $admin = $row['Admin'];
 
+    $count = mysqli_num_rows($result);
    // If result matched $myusername and $mypassword, table row must be 1 row
      
-   if($mypassword == $customerpassword) {
+   if($count == 1) {
       $_SESSION["login_user"] = $row["CustomerID"];
       if($admin == 1) {
           $_SESSION['admin'] = 1;
