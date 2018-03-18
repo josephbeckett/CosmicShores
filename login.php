@@ -55,7 +55,7 @@ $info = "";
     <form method="post">
         <div class="container">
             <div class="input-field">
-                <input type="text" name="txtUsername" required>
+                <input type="text" name="txtUsername" required autofocus >
                 <label for="txtUsername">Username</label>
             </div>
             <div class="input-field">

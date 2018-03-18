@@ -50,9 +50,7 @@
 	  <!-- Content -->
     <div class="center">
       <?php
-        require_once("nbbc/nbbc.php");
 
-        $bbcode = new BBCode;
 
         $sql = "SELECT * FROM Blog ORDER BY PostID DESC";
 
@@ -67,9 +65,9 @@
                 $content = $row['PostContent'];
                 $date = $row['PostDate'];
 
-                $output = $bbcode->Parse($content);
+                $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
 
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>$date</p>$admin</div>"; 
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id' target='_blank'>$title</a></h2><p>$output</p><p class='flow-text'>$date</p>$admin</div>"; 
             } 
             echo $posts;
         } else {

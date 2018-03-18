@@ -9,23 +9,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($conn, $_POST["txtUsername"]);
    $mypassword = mysqli_real_escape_string($conn, $_POST["txtPassword"]); 
 
-   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername' and Password = '$mypassword'";
+   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername' LIMIT 1";
    $result = mysqli_query($conn,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-   $active = $row["CustomerID"];
-   
-   $count = mysqli_num_rows($result);
-   
+   $customerid = $row["CustomerID"];
+   $customerpassword = $row['Password'];
+   $admin = $row['Admin'];
+
    // If result matched $myusername and $mypassword, table row must be 1 row
      
-   if($count == 1) {
+   if($mypassword == $customerpassword) {
       $_SESSION["login_user"] = $row["CustomerID"];
-      
+      if($admin == 1){
+          $_SESSION['admin'] = 1;
+      }
       header("location: loginhomepage.php");
    } else {
       $info = "Your Login Name or Password is invalid";
    }
-	mysqli_close($conn);
+    mysqli_close($conn);
+    
 }
 
 ?>

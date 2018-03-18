@@ -67,6 +67,18 @@ include("userdetails.php");
         </div>
     </div> 
 
+    <div class"container">
+        <div class="col s12 m12 l3">
+            <?php 
+                if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+                    echo "<a href='admin.php'>Admin</a> | <a href='logout.php'>Logout</a>"
+                }
+            ?>
+        </div>
+    </div>
+
+
+
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
