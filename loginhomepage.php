@@ -71,7 +71,7 @@ include("userdetails.php");
         <div class="col s12 m12 l3">
             <?php 
                 if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
-                    echo "<a href='admin.php'>Admin</a> | <a href='logout.php'>Logout</a>"
+                    echo "<a href='admin.php'>Admin</a> | <a href='logout.php'>Logout</a>";
                 }
             ?>
         </div>
