@@ -9,9 +9,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($conn, $_POST["txtUsername"]);
    $mypassword = mysqli_real_escape_string($conn, $_POST["txtPassword"]); 
 
-   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername', Password = '$mypassword'";
+   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername' and Password = '$mypassword'";
    $result = mysqli_query($conn,$sql);
-   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $customerid = $row["CustomerID"]; 
    $customerpassword = $row['Password'];
    $admin = $row['Admin'];
