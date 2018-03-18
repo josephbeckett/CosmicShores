@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($conn, $_POST["txtUsername"]);
    $mypassword = mysqli_real_escape_string($conn, $_POST["txtPassword"]); 
 
-   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername' ";
+   $sql = "SELECT CustomerID FROM User WHERE Username = '$myusername', Password = $mypassword";
    $result = mysqli_query($conn,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $customerid = $row["CustomerID"];
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      
    if($mypassword == $customerpassword) {
       $_SESSION["login_user"] = $row["CustomerID"];
-      if($admin == 1){
+      if($admin == 1) {
           $_SESSION['admin'] = 1;
       }
       header("location: loginhomepage.php");
