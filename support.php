@@ -73,7 +73,7 @@ include("supportticket.php");
 	<form method="post">
 		<div class="container">
 			<div class="input-field">
-				<input type="text" name="txtProblemTitle" required data-length"100">
+				<input type="text" name="txtProblemTitle" required data-length="100">
 				<label for="txtProblemTitle">Problem Title</label>
 			</div>
 			<div class="input-field col s12">
@@ -85,7 +85,7 @@ include("supportticket.php");
 				<label for="txtProblemContent">Problem Content</label>
 			</div>
             <div class="input-field">
-				<input type="text" name="txtProblemValidation" required data-length"100">
+				<input type="text" name="txtProblemValidation" required data-length="100">
 				<label for="txtProblemValidation">Enter Email</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit">Submit</button>
