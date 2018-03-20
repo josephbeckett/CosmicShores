@@ -2,7 +2,6 @@
 include("config.php");
 include("loggingin.php");
 ini_set('display_errors', 1);
-$info = "";
 ?>
 <html>
   <head>

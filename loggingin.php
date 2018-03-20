@@ -13,6 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $result = mysqli_query($conn,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $customerid = $row['CustomerID']; 
+   $customerusername = $row['Username']
    $customerpassword = $row['Password'];
    $admin = $row['Admin'];
 
