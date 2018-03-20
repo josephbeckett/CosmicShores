@@ -34,7 +34,6 @@
     </div>
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
-            
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 

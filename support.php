@@ -20,24 +20,8 @@ include("supportticket.php");
   </head>
 <!-- Start of body -->
   <body>
-	  
-<!-- Page loading transition -->
-    <div class="preloader-background">
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue-only">
-                <div class="circle-clipper left">
-                <div class="circle"></div>
-                </div><div class="gap-patch">
-                <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                <div class="circle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
-            
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
@@ -65,7 +49,7 @@ include("supportticket.php");
     <!-- Content -->
     <div class="container font center">
         <div class="col s12 m12 l3">
-		<h3>Hello <?php echo $row["Username"]; ?></h3>
+		<h3>Hello</h3>
 		<h4>What is your problem?</h4>
 	</div>
     </div> 

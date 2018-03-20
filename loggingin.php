@@ -1,5 +1,5 @@
 <?php
-include_once("config.php");
+include("config.php");
 session_start();
 ini_set('display_errors', 1);
 $info = "";
@@ -9,10 +9,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($conn, $_POST["txtUsername"]);
    $mypassword = mysqli_real_escape_string($conn, $_POST["txtPassword"]); 
 
-   $sql = "SELECT CustomerID and Admin FROM User WHERE Username = '$myusername' and Password = '$mypassword'";
+   $sql = "SELECT CustomerID and Admin FROM User WHERE Username = '$myusername' and Password = '$mypassword' ";
    $result = mysqli_query($conn,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-   $customerid = $row["CustomerID"]; 
+   $customerid = $row['CustomerID']; 
    $customerpassword = $row['Password'];
    $admin = $row['Admin'];
 
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    // If result matched $myusername and $mypassword, table row must be 1 row
      
    if($count == 1) {
-      $_SESSION["login_user"] = $row["CustomerID"];
+      $_SESSION['login_user'] = $row['CustomerID'];
       $_SESSION['admin'] = $row['Admin'];
       }
       header("location: loginhomepage.php");
