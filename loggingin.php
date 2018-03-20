@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include_once("config.php");
 session_start();
 ini_set('display_errors', 1);
 $info = "";
@@ -21,8 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      
    if($count == 1) {
       $_SESSION["login_user"] = $row["CustomerID"];
-      if($admin == 1) {
-          $_SESSION['admin'] = 1;
+      $_SESSION['admin'] = $row['Admin'];
       }
       header("location: loginhomepage.php");
    } else {

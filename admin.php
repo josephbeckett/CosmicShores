@@ -1,9 +1,11 @@
 <?php
-  include("session.php");
+if ($_SESSION['Admin'] != true ) {
+  header("Location: login.php");
+}
 ?>
 <html>
   <head>
-	  <title>Blog</title>
+	  <title>Admin Area</title>
     <!--Import Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
     <!--Import Google Icon Font-->
@@ -67,7 +69,7 @@
 
                 $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
 
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id' target='_blank'>$title</a></h2><p>$output</p><p class='flow-text'>$date</p>$admin</div>"; 
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id' target='_blank'>$title</a></h2><p>$content</p><p class='flow-text'>$date</p>$admin</div>"; 
             } 
             echo $posts;
         } else {
