@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['Admin'] != true ) {
+if ($_SESSION['Admin'] != 1 ) {
   header("Location: login.php");
 }
 ?>
