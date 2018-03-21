@@ -69,7 +69,9 @@ if ($_SESSION['admin'] != 1 ) {
                   $title = $row['PostTitle'];
                   $description = $row['PostDescription'];
                   $content = $row['PostContent'];
+                  $email = $row['PostValidation']
                   $date = $row['PostDate'];
+
 
                   $outputtitle = $bbcode->Parse($title);
                   $outputdescrip = $bbcode->Parse($description);
@@ -79,7 +81,12 @@ if ($_SESSION['admin'] != 1 ) {
                   if ($_SESSION['admin'] == 1 ) {
                       $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
                   }
-                  $posts .= "<div class='container'><h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4><p class='flow-text'>$outputdescrip</p><p class='flow-text'>$outputcontent</p><p class='flow-text'>$date</p>$admin</div>";
+                  $posts .= "<div class='container'>
+                    <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
+                    <p class='flow-text'>$outputdescrip</p>
+                    <p class='flow-text'>$outputcontent</p>
+                    <p class='flow-text'> submitted by $email at : $date</p>$admin
+                    </div>";
               }
               echo $posts;
           } else {
