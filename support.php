@@ -61,17 +61,17 @@ session_start();
 				<input type="text" name="txtProblemTitle" required data-length="100">
 				<label for="txtProblemTitle">Problem Title</label>
 			</div>
-			<div class="input-field col s12">
-				<input name="txtProblemSubtitle" data-length="200"></input>
+			<div class="input-field">
+				<textarea name="txtProblemSubtitle" class="materialize-textarea" data-length="200"></textarea>
 				<label for="txtProblemSubtitle">Problem Subtitle</label>
 			</div>
-      <div class="input-field col s12">
-        <input name="txtProblemContent" class="materialize-textarea" required data-length="500"></input>
+      <div class="input-field">
+        <textarea name="txtProblemContent" class="materialize-textarea" required data-length="500"></textarea>
 				<label for="txtProblemContent">Problem Content</label>
 			</div>
       <div class="input-field">
-        <input type="text" name="txtProblemValidation" required data-length="100">
-        <label for="txtProblemValidation">Enter Email</label>
+        <input type="text" name="txtProblemValidation" class="validate" required data-length="100">
+        <label for="txtProblemValidation" data-error="wrong" data-success="right">Enter Email</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit" name="submit">Submit</button>
 		</div>

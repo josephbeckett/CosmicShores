@@ -13,6 +13,8 @@
 
     if(!isset($_SESSION["login_user"])){
         header("location: login.php");
+    } else if (!isset($_SESSION['admin'])) {
+      header("Location: login.php");
     }
 
 ?>
