@@ -71,11 +71,11 @@
                 if ($_SESSION['admin'] ==1 ) {
                     $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
                 }
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>$date</p>$admin</div>";
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>posted on $date</p>$admin</div>";
             }
             echo $posts;
         } else {
-            echo "There are no results to display!";
+            echo "There are no posts on the blog to view.";
         }
       ?>
 

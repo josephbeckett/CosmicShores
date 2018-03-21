@@ -90,7 +90,7 @@ if ($_SESSION['admin'] != 1 ) {
               }
               echo $posts;
           } else {
-              echo "There are no results to display!";
+              echo "There are no Support tickets to display";
           }
         ?>
     </div>
