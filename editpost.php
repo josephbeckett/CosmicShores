@@ -22,13 +22,13 @@
 <html>
     <head>
         <!--Import Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Import  stylesheet.css-->
-        <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/> 
+        <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
         <title>Blog - Post</title>
     </head>
     <body>
@@ -37,26 +37,13 @@
         <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
         <!-- Header -->
-        <nav class="transparentBG z-depth-0">
-            <div class="nav-wrapper">
-                <img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href ="loginhomepage.php">Dashboard</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="login.php">Sign out</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href ="loginhomepage.php">Dashboard</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="login.php">Sign out</a></li>
-                </ul>
-            </div>
-        </nav>
+        <?php
+            if($row['Admin'] == 1) {
+              include('adminnav.php');
+            } else {
+              include('usernav.php');
+            }
+        ?>
         <?php
 
         $sql_get = "SELECT PostTitle, PostContent FROM Blog WHERE PostID=$pid";
