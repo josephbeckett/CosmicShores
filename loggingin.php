@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       }
       header("location: loginhomepage.php");
    } else {
-      $info = "Your Login Name or Password is invalid";
+      echo "Your Login Name or Password is invalid";
    }
     mysqli_close($conn);
 ?>
