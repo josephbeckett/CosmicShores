@@ -14,10 +14,11 @@ if(isset($_POST['submit'])) {
     $sql = "INSERT INTO Support (PostTitle, PostDescription, PostContent, PostValidation, PostDate)
     VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$myvalidation', '$mycurrentdate')";
     if (mysqli_query($conn, $sql)) {
-        echo "Ticket successfully submitted"; 
+        echo "Ticket successfully submitted";
+        header("Location: supportticket.php");
     } else {
         echo "Unable to submit ticket";
     }
 }
-    header("Location: supportticket.php?error");
+
 ?>
