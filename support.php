@@ -49,7 +49,7 @@ session_start();
     </nav>
     <!-- Content -->
     <div class="container font center">
-        <div class="col s12 m12 l3">
+      <div class="col s12 m12 l3">
     		<h3>Hello</h3>
     		<h4>What is your problem?</h4>
     	</div>
@@ -62,16 +62,16 @@ session_start();
 				<label for="txtProblemTitle">Problem Title</label>
 			</div>
 			<div class="input-field col s12">
-				<textarea name="txtProblemSubtitle" class="materialize-textarea"  data-length="200"></textarea>
+				<input name="txtProblemSubtitle" data-length="200"></input>
 				<label for="txtProblemSubtitle">Problem Subtitle</label>
 			</div>
-            <div class="input-field col s12">
-                <textarea name="txtProblemContent" class="materialize-textarea" required data-length="500"></textarea>
+      <div class="input-field col s12">
+        <input name="txtProblemContent" class="materialize-textarea" required data-length="500"></input>
 				<label for="txtProblemContent">Problem Content</label>
 			</div>
-            <div class="input-field">
-				<input type="text" name="txtProblemValidation" required data-length="100">
-				<label for="txtProblemValidation">Enter Email</label>
+      <div class="input-field">
+        <input type="text" name="txtProblemValidation" required data-length="100">
+        <label for="txtProblemValidation">Enter Email</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit" name="submit">Submit</button>
 		</div>

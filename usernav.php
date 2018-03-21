@@ -1,3 +1,9 @@
+<?php
+include_once 'session.php';
+if ($_SESSION['login_user'] != $row['CustomerID']) {
+  header("Location: login.php");
+}
+?>
 <nav class="transparentBG z-depth-0">
     <div class="nav-wrapper">
   <img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
