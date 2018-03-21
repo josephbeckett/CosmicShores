@@ -75,7 +75,8 @@
             }
             echo $posts;
         } else {
-            echo "There are no posts on the blog to view.";
+            echo "There are no posts on the blog to view.
+            ";
         }
       ?>
 
