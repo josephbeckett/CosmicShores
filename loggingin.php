@@ -23,10 +23,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    if($count == 1) {
       $_SESSION['login_user'] = $row['CustomerID'];
       $_SESSION['admin'] = $row['Admin'];
-      }
       header("location: loginhomepage.php");
    } else {
       echo "Your Login Name or Password is invalid";
    }
+ }
     mysqli_close($conn);
 ?>
