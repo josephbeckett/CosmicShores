@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html>
   <head>
 	  <title>Best Photos</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -25,26 +24,9 @@
 
   <body>
 <!-- Navbar -->
-    <nav class="normalNav">
-        <div class="nav-wrapper">
-            <img src="images/CosmicShoresLogoWithoutLogo.png" alt="">
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="support.php">Support</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="support.php">Support</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </div>
-    </nav>
+<?php
+  include 'normalnav.php';
+ ?>
 
     <!-- Photo Grid -->
     <div class="w3-row" id="myGrid" style="margin-bottom:128px">
@@ -56,7 +38,7 @@
             <img src="images/BestPhoto5.jpg" style="width:100%">
             <img src="images/BestPhoto6.jpeg" style="width:100%">
         </div>
-    
+
         <div class="w3-third">
             <img src="images/BestPhoto7.jpg" style="width:100%">
             <img src="images/BestPhoto8.jpg" style="width:100%">
@@ -65,7 +47,7 @@
             <img src="images/BestPhoto11.jpg" style="width:100%">
             <img src="images/BestPhoto12.jpg" style="width:100%">
         </div>
-    
+
         <div class="w3-third">
             <img src="images/BestPhoto13.jpg" style="width:100%">
             <img src="images/BestPhoto14.jpg" style="width:100%">
@@ -77,7 +59,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge font" style="margin-top:128px"> 
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge font" style="margin-top:128px">
         <h1 class="font">So, Do You Like What You See?</h1>
         <a class="waves-effect waves-light btn" href="signup.php" target="_blank">Join Us</a>
     </footer>

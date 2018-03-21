@@ -3,7 +3,7 @@
   <head>
 	  <title>About</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -37,21 +37,21 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
-				<li><a href="support.php">Support</a></li>
+		            <li><a href="support.php">Support</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
-				<li><a href="support.php">Support</a></li>
+		            <li><a href="support.php">Support</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
         </div>
     </nav>
 	<!-- Content cards -->
-    <div class="container font"> 
+    <div class="container font">
         <div class="row">
             <div class="col s12 m12 l6">
                 <div class="card">
@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-content">
                         <p>Here is a collection of all the best selected photos from our members. Please enjoy.</p>
-						<a class="wave-effect btn" href="bestphotos.php">See More</a>
+	                     <a class="wave-effect btn" href="bestphotos.php">See More</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="card-content">
                         <p>If you're interesting in become part of our astronomical society, then don't hesitate to sign up.</p>
-						<a class="wave-effect btn" href="signup.php">Sign Up</a>
+			                  <a class="wave-effect btn" href="signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -84,9 +84,9 @@
 			  <h3> About Our Society </h3>
 				<img src="images/CosmicShoresLogo2WithoutBackground.png">
 			  <br>
-			<p> We are a non-profit society dedicated to everything Space based, so whether you're a professional or amateur you're welcome to join us and share your knowledge and passion with us </p>
+			     <p> We are a non-profit society dedicated to everything Space based, so whether you're a professional or amateur you're welcome to join us and share your knowledge and passion with us </p>
 		  </div>
-	  </div> 
+	  </div>
 	<div class="container font">
 	  <ul class="collection">
 		  <h3 class="center"> Our Society Leaders </h3>
@@ -119,8 +119,8 @@
 			 Amateur Photographer
 		  </p>
 		</li>
-	  </ul>
-	  </div>
+  </ul>
+</div>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

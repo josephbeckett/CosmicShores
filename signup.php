@@ -7,14 +7,13 @@ $info = "";
   <head>
 	  <title>Sign Up</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Import  stylesheet.css-->
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -36,30 +35,13 @@ $info = "";
     </div>
 <!-- Video Background -->
     <video muted playsinline autoplay loop id="bgvid">
-        
+
         <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 <!-- Navbar -->
-    <nav class="normalNav">
-        <div class="nav-wrapper">
-            <img src="images/CosmicShoresLogoWithoutLogo.png" alt="">
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="support.php">Support</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="support.php">Support</a></li>
-                <li><a href="signup.php">Sign Up</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </div>
-    </nav>
+<?php
+  include 'normalnav.php';
+ ?>
 <!-- Content Form -->
     <div class="section">
         <div class="container">
@@ -126,7 +108,7 @@ $info = "";
         </div>
     </div>
 	<?php echo ($info);?>
-                
+
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
