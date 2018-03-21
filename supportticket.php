@@ -15,7 +15,7 @@ if(isset($_POST['submit'])) {
     VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$myvalidation', '$mycurrentdate')";
     if (mysqli_query($conn, $sql)) {
         echo "Ticket successfully submitted";
-        header("Location: supportticket.php");
+        header("Location: support.php");
     } else {
         echo "Unable to submit ticket";
     }
