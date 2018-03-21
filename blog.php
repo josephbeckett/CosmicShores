@@ -5,13 +5,13 @@
   <head>
 	  <title>Blog</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Import  stylesheet.css-->
-    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/> 
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -20,9 +20,9 @@
   </head>
 <!-- Start of body -->
   <body>
-	  
+
 <!-- Video Background -->
-    <video playsinline autoplay muted loop id="bgvid">         
+    <video playsinline autoplay muted loop id="bgvid">
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
     <!-- Header -->
@@ -56,7 +56,7 @@
 
         $sql = "SELECT * FROM Blog ORDER BY PostID DESC";
 
-        $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+        $res = mysqli_query($conn, $sql);
 
         $posts = "";
 
@@ -68,12 +68,15 @@
                 $date = $row['PostDate'];
 
                 $output = $bbcode->Parse($content);
-
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>$date</p>$admin</div>"; 
-            } 
+                if ($_SESSION['admin'] ==1 ) {
+                    $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
+                }
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>posted on $date</p>$admin</div>";
+            }
             echo $posts;
         } else {
-            echo "There are no results to display!";
+            echo "There are no posts on the blog to view.
+            ";
         }
       ?>
 

@@ -4,9 +4,11 @@
 
     $user_check = $_SESSION["login_user"];
 
-    $ses_sql = mysqli_query($conn,"SELECT CustomerID FROM User WHERE CustomerID = '$user_check' ");
+    $ses_sql = mysqli_query($conn,"SELECT * FROM User WHERE CustomerID = '$user_check' ");
 
     $row = mysqli_fetch_array($ses_sql, MYSQLI_ASSOC);
+
+    $_SESSION['admin'] = $row['Admin'];
 
 
     if(!isset($_SESSION["login_user"])){

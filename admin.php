@@ -1,5 +1,6 @@
 <?php
-if ($_SESSION['Admin'] != 1 ) {
+include_once 'session.php';
+if ($_SESSION['admin'] != 1 ) {
   header("Location: login.php");
 }
 ?>
@@ -7,13 +8,13 @@ if ($_SESSION['Admin'] != 1 ) {
   <head>
 	  <title>Admin Area</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Import  stylesheet.css-->
-    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/> 
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -22,9 +23,9 @@ if ($_SESSION['Admin'] != 1 ) {
   </head>
 <!-- Start of body -->
   <body>
-	  
+
 <!-- Video Background -->
-    <video playsinline autoplay muted loop id="bgvid">         
+    <video playsinline autoplay muted loop id="bgvid">
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
     <!-- Header -->
@@ -51,36 +52,48 @@ if ($_SESSION['Admin'] != 1 ) {
 
 	  <!-- Content -->
     <div class="center">
-      <?php
+        <?php
+          require_once("nbbc/nbbc.php");
+
+          $bbcode = new BBCode;
+
+          $sql = "SELECT * FROM Support ORDER BY SupportID DESC";
+
+          $res = mysqli_query($conn, $sql);
+
+          $posts = "";
+
+          if (mysqli_num_rows($res) > 0) {
+              while($row = mysqli_fetch_assoc($res)) {
+                  $id = $row['SupportID'];
+                  $title = $row['PostTitle'];
+                  $description = $row['PostDescription'];
+                  $content = $row['PostContent'];
+                  $email = $row['PostValidation'];
+                  $date = $row['PostDate'];
 
 
-        $sql = "SELECT * FROM Blog ORDER BY PostID DESC";
+                  $outputtitle = $bbcode->Parse($title);
+                  $outputdescrip = $bbcode->Parse($description);
+                  $outputcontent = $bbcode->Parse($content);
 
-        $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
-        $posts = "";
-
-        if (mysqli_num_rows($res) > 0) {
-            while($row = mysqli_fetch_assoc($res)) {
-                $id = $row['PostID'];
-                $title = $row['PostTitle'];
-                $content = $row['PostContent'];
-                $date = $row['PostDate'];
-
-                $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
-
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id' target='_blank'>$title</a></h2><p>$content</p><p class='flow-text'>$date</p>$admin</div>"; 
-            } 
-            echo $posts;
-        } else {
-            echo "There are no results to display!";
-        }
-      ?>
-
-    <br />
-
-    <a class="waves-effect waves-light btn" href="blogpost.php">Post</a>
-  </div>
+                  if ($_SESSION['admin'] == 1 ) {
+                      $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
+                  }
+                  $posts .= "<div class='container'>
+                    <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
+                    <p class='flow-text'>$outputdescrip</p>
+                    <p class='flow-text'>$outputcontent</p>
+                    <p class='flow-text'> submitted by $email at : $date</p>$admin
+                    </div>";
+              }
+              echo $posts;
+          } else {
+              echo "There are no Support tickets to display";
+          }
+        ?>
+    </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
