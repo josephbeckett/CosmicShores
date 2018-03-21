@@ -50,9 +50,9 @@ session_start();
     <!-- Content -->
     <div class="container font center">
         <div class="col s12 m12 l3">
-		<h3>Hello</h3>
-		<h4>What is your problem?</h4>
-	</div>
+    		<h3>Hello</h3>
+    		<h4>What is your problem?</h4>
+    	</div>
     </div>
     <!-- Support Form -->
 	<form action="supportticket.php" method="POST" enctype="multipart/form-data">
