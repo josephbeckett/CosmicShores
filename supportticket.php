@@ -9,7 +9,7 @@ if(isset($_POST['submit'])) {
     $myproblemsubtitle = mysqli_real_escape_string($conn,$_POST["txtProblemSubtitle"]);
     $myproblemcontent = mysqli_real_escape_string($conn,$_POST["txtProblemContent"]);
     $myvalidation = mysqli_real_escape_string($conn,$_POST["txtProblemValidation"]);
-    $mycurrentdate = date('i:H d-m-Y');
+    $mycurrentdate = date('H:i d-m-Y');
 
     $sql = "INSERT INTO Support (PostTitle, PostDescription, PostContent, PostValidation, PostDate)
     VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$myvalidation', '$mycurrentdate')";
