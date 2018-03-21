@@ -1,6 +1,6 @@
 <?php
 include_once 'session.php';
-if ($_SESSION['admin'] != $row['admin']) {
+if ($_SESSION['admin'] != $row['Admin']) {
   header("Location: login.php");
 }
 ?>
