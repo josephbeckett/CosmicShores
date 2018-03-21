@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($conn,$_POST["txtUsername"]);
     $mypassword = mysqli_real_escape_string($conn,$_POST["txtPassword"]);
     $myemail = mysqli_real_escape_string($conn,$_POST["txtEmail"]);
-    $myquestionqnswer = mysqli_real_escape_string($conn,$_POST["txtQuestionAnswer"]);
+    $myquestionanswer = mysqli_real_escape_string($conn,$_POST["txtQuestionAnswer"]);
     $mydob = mysqli_real_escape_string($conn,$_POST["txtDOB"]);
 
     $sql = "INSERT INTO User (FirstName, LastName, Username, Password, Email, QuestionAnswer, DOB)

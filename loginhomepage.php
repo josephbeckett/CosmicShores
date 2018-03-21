@@ -70,7 +70,7 @@ include("userdetails.php");
     <div class"container">
         <div class="col s12 m12 l3">
             <?php
-                if(isset($row['Admin'] == 1) {
+                if($row['Admin'] == 1) {
                     echo "<a href='admin.php'>Admin</a> | <a href='logout.php'>Logout</a>";
                 } else {
                     echo "Fail";
