@@ -42,24 +42,13 @@ include("userdetails.php");
     </video>
 
 <!-- Header -->
-    <nav class="transparentBG z-depth-0">
-        <div class="nav-wrapper">
-			<img class="logoPC" src="images/CosmicShoresLogoWithoutLogo.png" alt="">
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="logout.php">Sign out</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="logout.php">Sign out</a></li>
-            </ul>
-        </div>
-    </nav>
+<?php
+    if($row['Admin'] == 1) {
+      include('adminnav.php');
+    } else {
+      include('usernav.php')
+    }
+?>
 	  <!-- Content -->
     <div class="container font center">
         <div class="col s12 m12 l3">
@@ -67,17 +56,6 @@ include("userdetails.php");
         </div>
     </div>
 
-    <div class"container">
-        <div class="col s12 m12 l3">
-            <?php
-                if($row['Admin'] == 1) {
-                    echo "<div class='container'><div class='center'<a href='admin.php'>Admin</a> | <a href='logout.php'>Logout</a></div></div>";
-                } else {
-                    echo "Fail";
-                }
-            ?>
-        </div>
-    </div>
 
 
 
