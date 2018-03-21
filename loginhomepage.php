@@ -5,13 +5,13 @@ include("userdetails.php");
   <head>
 	  <title>Dashboard</title>
     <!--Import Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Import  stylesheet.css-->
-    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/> 
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"  media="screen,projection"/>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -20,7 +20,7 @@ include("userdetails.php");
   </head>
 <!-- Start of body -->
   <body>
-	  
+
 <!-- Page loading transition -->
     <div class="preloader-background">
         <div class="preloader-wrapper big active">
@@ -37,7 +37,7 @@ include("userdetails.php");
     </div>
 <!-- Video Background -->
     <video playsinline autoplay muted loop id="bgvid">
-            
+
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
@@ -65,13 +65,15 @@ include("userdetails.php");
         <div class="col s12 m12 l3">
             <h1>Welcome <?php echo $row["Username"]; ?></h1>
         </div>
-    </div> 
+    </div>
 
     <div class"container">
         <div class="col s12 m12 l3">
-            <?php 
+            <?php
                 if(isset($row['Admin'] == 1) {
                     echo "<a href='admin.php'>Admin</a> | <a href='logout.php'>Logout</a>";
+                } else {
+                    echo "Fail";
                 }
             ?>
         </div>
