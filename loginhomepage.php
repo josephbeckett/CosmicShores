@@ -46,7 +46,7 @@ include("userdetails.php");
     if($row['Admin'] == 1) {
       include('adminnav.php');
     } else {
-      include('usernav.php')
+      include('usernav.php');
     }
 ?>
 	  <!-- Content -->
