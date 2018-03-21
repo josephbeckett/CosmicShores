@@ -69,7 +69,7 @@ if ($_SESSION['admin'] != 1 ) {
                   $title = $row['PostTitle'];
                   $description = $row['PostDescription'];
                   $content = $row['PostContent'];
-                  $email = $row['PostValidation']
+                  $email = $row['PostValidation'];
                   $date = $row['PostDate'];
 
 
