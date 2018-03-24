@@ -1,5 +1,4 @@
 <?php
-
     include("session.php");
 
     if (!isset($_GET['pid'])) {

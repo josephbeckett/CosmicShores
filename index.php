@@ -44,7 +44,8 @@
 	  <!-- Content -->
 	  <div class="container font center">
 		  <div class="col s12 m12 l3">
-			  <h1> Cosmic Shores </h1>
+        <h1> Welcome to </h1>
+			  <h2> Cosmic Shores </h2>
 			  <h3> Amateur Astronomy Society</h3>
 			  <br>
 			  <a href="signup.php" class="wave-effect waves-light btn"> Want to become a member?</a>

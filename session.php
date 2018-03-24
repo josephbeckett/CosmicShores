@@ -10,6 +10,7 @@
 
     $_SESSION['admin'] = $row['Admin'];
 
+    $_SESSION['uid'] = $row['CustomerID'];
 
     if(!isset($_SESSION["login_user"])){
         header("location: login.php");

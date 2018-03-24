@@ -1,8 +1,14 @@
 <?php
-include_once 'session.php';
+include 'session.php';
 if ($_SESSION['admin'] != 1 ) {
   header("Location: login.php");
 }
+
+// if(!isset($_GET['uid'])) {
+//     header("Location: signup.php");
+// }
+//
+// $pid = $_GET['uid'];
 ?>
 <html>
   <head>
@@ -28,8 +34,7 @@ if ($_SESSION['admin'] != 1 ) {
     <video playsinline autoplay muted loop id="bgvid">
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
-    <!-- Header -->
-    <!-- Header -->
+    <!-- Navbar -->
     <?php
         if($row['Admin'] == 1) {
           include('adminnav.php');
@@ -39,48 +44,56 @@ if ($_SESSION['admin'] != 1 ) {
     ?>
 
 	  <!-- Content -->
-    <div class="center">
-        <?php
-          require_once("nbbc/nbbc.php");
 
-          $bbcode = new BBCode;
+    <div class="row">
+      <div class="container">
+        <!-- <div class="col s6 m6 l6"> -->
+          <div class="center">
+            <h1 class="flow-text">Support Tickets</h1>
+            <?php
+              require_once("nbbc/nbbc.php");
 
-          $sql = "SELECT * FROM Support ORDER BY SupportID DESC";
+              $bbcode = new BBCode;
 
-          $res = mysqli_query($conn, $sql);
+              $sql = "SELECT * FROM Support ORDER BY SupportID DESC";
 
-          $posts = "";
+              $res = mysqli_query($conn, $sql);
 
-          if (mysqli_num_rows($res) > 0) {
-              while($row = mysqli_fetch_assoc($res)) {
-                  $id = $row['SupportID'];
-                  $title = $row['PostTitle'];
-                  $description = $row['PostDescription'];
-                  $content = $row['PostContent'];
-                  $email = $row['PostValidation'];
-                  $date = $row['PostDate'];
+              $posts = "";
 
-
-                  $outputtitle = $bbcode->Parse($title);
-                  $outputdescrip = $bbcode->Parse($description);
-                  $outputcontent = $bbcode->Parse($content);
+              if (mysqli_num_rows($res) > 0) {
+                  while($row = mysqli_fetch_assoc($res)) {
+                      $id = $row['SupportID'];
+                      $title = $row['PostTitle'];
+                      $description = $row['PostDescription'];
+                      $content = $row['PostContent'];
+                      $email = $row['PostValidation'];
+                      $date = $row['PostDate'];
 
 
-                  if ($_SESSION['admin'] == 1 ) {
-                      $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
+                      $outputtitle = $bbcode->Parse($title);
+                      $outputdescrip = $bbcode->Parse($description);
+                      $outputcontent = $bbcode->Parse($content);
+
+
+                      if ($_SESSION['admin'] == 1 ) {
+                          $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
+                      }
+                      $posts .= "<div class='container'>
+                        <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
+                        <p class='flow-text'>$outputdescrip</p>
+                        <p class='flow-text'>$outputcontent</p>
+                        <p class='flow-text'> submitted by $email at : $date</p>$admin
+                        </div>";
                   }
-                  $posts .= "<div class='container'>
-                    <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
-                    <p class='flow-text'>$outputdescrip</p>
-                    <p class='flow-text'>$outputcontent</p>
-                    <p class='flow-text'> submitted by $email at : $date</p>$admin
-                    </div>";
+                  echo $posts;
+              } else {
+                  echo "There are no Support tickets to display";
               }
-              echo $posts;
-          } else {
-              echo "There are no Support tickets to display";
-          }
-        ?>
+            ?>
+          </div>
+        <!-- </div> -->
+      </div>
     </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
