@@ -84,7 +84,7 @@
           <div class="col s4 m4 l4">
             <div class="waves-effect waves-light btn">
               <span>Upload</span>
-              <input type="submit" name="submit"></input>
+              <input type="submit"></input>
             </div>
           </div>
         </form>
