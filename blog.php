@@ -53,7 +53,7 @@
 
         $bbcode = new BBCode;
 
-        $sql = "SELECT Blog.PostID, Blog.PostTitle, Blog.PostContent, Blog.PostDate, User.Username FROM blog INNER JOIN user ON User.CustomerID = Blog.CustomerID ORDER BY PostID DESC";
+        $sql = "SELECT Blog.PostID, Blog.PostTitle, Blog.PostContent, Blog.PostDate, User.Username FROM Blog INNER JOIN User ON User.CustomerID = Blog.CustomerID ORDER BY PostID DESC";
 
         $res = mysqli_query($conn, $sql);
 

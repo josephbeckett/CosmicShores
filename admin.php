@@ -54,7 +54,7 @@ if ($_SESSION['admin'] != 1 ) {
 
             $bbcode = new BBCode;
 
-            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, user.Username FROM Support INNER JOIN user WHERE user.CustomerID = Support.CustomerID ORDER BY SupportID DESC";
+            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, user.Username FROM Support INNER JOIN Uáser WHERE user.CustomerID = Support.CustomerID ORDER BY SupportID DESC";
 
             $res = mysqli_query($conn, $sql);
 
