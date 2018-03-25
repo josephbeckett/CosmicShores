@@ -4,8 +4,8 @@
     if (!isset($_GET['photoid'])) {
         header('Location: gallery.php');
     } else {
-        $imgsql = "SELECT Image FROM Photos WHERE ImageID = $photoid"
-        $image = $row['Image']
+        $imgsql = "SELECT Image FROM Photos WHERE ImageID = $photoid";
+        $image = $row['Image'];
         $file = "uploadedimages/$photoid";
         if (!unlink($file))
           {
