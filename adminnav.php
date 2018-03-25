@@ -10,7 +10,7 @@ if ($_SESSION['admin'] != $row['Admin']) {
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="profile.php">Profile</a></li>
-            <li><a href='admin.php'>Admin Area</a></li>
+            <li><a href='admin.php'>Support Tickets</a></li>
             <li><a href='adminuserview.php'>User Accounts List</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="gallery.php">Gallery</a></li>
@@ -19,7 +19,7 @@ if ($_SESSION['admin'] != $row['Admin']) {
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="profile.php">Profile</a></li>
-            <li><a href='admin.php'>Admin Area</a></li>
+            <li><a href='admin.php'>Support Tickets</a></li>
             <li><a href='adminuserview.php'>User Accounts List</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="gallery.php">Gallery</a></li>
