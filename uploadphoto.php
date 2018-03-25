@@ -49,7 +49,7 @@ if ($uploadOk == 0) {
 $image = ($_FILES['fileToUpload']['name']);
 $date = date('l jS \of F Y h:i:s A');
 $uid = $_SESSION['login_user'];
-$sql = "INSERT INTO photos (Image, ImageDate, CustomerID) VALUES ('$image', '$date', '$uid')";
+$sql = "INSERT INTO Photos (Image, ImageDate, CustomerID) VALUES ('$image', '$date', '$uid')";
 if (mysqli_query($conn, $sql)) {
     $info = "Picture Uploaded Successfully";
 } else {

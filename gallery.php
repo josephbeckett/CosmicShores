@@ -34,7 +34,7 @@
   <div class="center">
   <?php
 
-    $sql = "SELECT photos.ImageID, photos.Image, photos.ImageDate, user.Username FROM photos INNER JOIN user WHERE user.CustomerID = photos.CustomerID ORDER BY ImageID DESC";
+    $sql = "SELECT Photos.ImageID, Photos.Image, Photos.ImageDate, User.Username FROM Photos INNER JOIN User WHERE User.CustomerID = Photos.CustomerID ORDER BY ImageID DESC";
 
     $res = mysqli_query($conn, $sql);
 

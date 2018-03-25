@@ -54,7 +54,7 @@ if ($_SESSION['admin'] != 1 ) {
 
             $bbcode = new BBCode;
 
-            $sql = "SELECT support.SupportID, support.PostTitle, support.PostDescription, support.PostContent, support.PostDate, user.Username FROM support INNER JOIN user WHERE user.CustomerID = support.CustomerID ORDER BY SupportID DESC";
+            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, user.Username FROM Support INNER JOIN user WHERE user.CustomerID = Support.CustomerID ORDER BY SupportID DESC";
 
             $res = mysqli_query($conn, $sql);
 
@@ -62,7 +62,7 @@ if ($_SESSION['admin'] != 1 ) {
 
             if (mysqli_num_rows($res) > 0) {
                 while($row = mysqli_fetch_assoc($res)) {
-                    $id = $row['SupportID'];
+                    $supportid = $row['SupportID'];
                     $title = $row['PostTitle'];
                     $description = $row['PostDescription'];
                     $content = $row['PostContent'];
@@ -76,7 +76,7 @@ if ($_SESSION['admin'] != 1 ) {
 
 
                     if ($_SESSION['admin'] == 1 ) {
-                        $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
+                        $admin = "<div><a href='delsupportpost.php?supportid=$supportid'>Delete</a></div>";
                     }
                     $posts .= "<div class='container'>
                       <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>

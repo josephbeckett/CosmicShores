@@ -5,7 +5,7 @@
         header('Location: gallery.php');
     } else {
         $photoid = $_GET['photoid'];
-        $sql = "DELETE FROM photos WHERE ImageID = $photoid";
+        $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
         mysqli_query($conn, $sql);
         header('Location: gallery.php');
     }
