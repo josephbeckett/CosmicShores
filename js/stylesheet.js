@@ -1,22 +1,18 @@
-// working sidenave 
+// working sidenave
 $( document ).ready(function(){})
 $(".button-collapse").sideNav();
 
-// Allow parallax to work 
-$(document).ready(function(){
-    $('.parallax').parallax();
-});
 
-// Index Page Loader 
+// Index Page Loader
 document.addEventListener("DOMContentLoaded", function(){
 	$('.preloader-background').delay(500).fadeOut('slow');
-	
+
 	$('.preloader-wrapper')
 		.delay(1000)
 		.fadeOut();
 });
 
-// 
+//
 $(document).ready(function() {
     $('select').material_select();
 });
@@ -60,17 +56,17 @@ myInput.onblur = function() {
 myInput.onkeyup = function() {
   // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {  
+  if(myInput.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
     letter.classList.add("valid");
   } else {
     letter.classList.remove("valid");
     letter.classList.add("invalid");
   }
-  
+
   // Validate capital letters
   var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {  
+  if(myInput.value.match(upperCaseLetters)) {
     capital.classList.remove("invalid");
     capital.classList.add("valid");
   } else {
@@ -80,14 +76,14 @@ myInput.onkeyup = function() {
 
   // Validate numbers
   var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {  
+  if(myInput.value.match(numbers)) {
     number.classList.remove("invalid");
     number.classList.add("valid");
   } else {
     number.classList.remove("valid");
     number.classList.add("invalid");
   }
-  
+
   // Validate length
   if(myInput.value.length >= 8) {
     length.classList.remove("invalid");

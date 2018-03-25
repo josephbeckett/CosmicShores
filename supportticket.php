@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("./session.php");
 session_start();
 $info = "";
 if(isset($_POST['submit'])) {
@@ -8,11 +8,12 @@ if(isset($_POST['submit'])) {
     $myproblemtitle = mysqli_real_escape_string($conn,$_POST["txtProblemTitle"]);
     $myproblemsubtitle = mysqli_real_escape_string($conn,$_POST["txtProblemSubtitle"]);
     $myproblemcontent = mysqli_real_escape_string($conn,$_POST["txtProblemContent"]);
-    $myvalidation = mysqli_real_escape_string($conn,$_POST["txtProblemValidation"]);
     $mycurrentdate = date('H:i d-m-Y');
 
-    $sql = "INSERT INTO Support (PostTitle, PostDescription, PostContent, PostValidation, PostDate)
-    VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$myvalidation', '$mycurrentdate')";
+    $uid = $_SESSION['login_user'];
+
+    $sql = "INSERT INTO Support (PostTitle, PostDescription, PostContent, PostDate, CustomerID)
+    VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$mycurrentdate', '$uid')";
     if (mysqli_query($conn, $sql)) {
         echo "Ticket successfully submitted";
         header("Location: support.php");

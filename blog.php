@@ -1,5 +1,6 @@
 <?php
   include("session.php");
+
 ?>
 <html>
   <head>
@@ -38,11 +39,21 @@
 	  <!-- Content -->
     <div class="center">
       <?php
+        // $sql1 = " SELECT user.Username
+        //   FROM user
+        //   INNER JOIN blog
+        //   ON user.CustomerID = blog.CustomerID";
+        // $query1 = mysqli_query($conn, $sql1) or die(mysqli_error($conn));
+        // while($row1 = mysqli_fetch_array($query1, MYSQLI_ASSOC)) {
+        //   $username = $row["Username"];
+        // }
+        // $sql ="SELECT user.Username FROM user INNER JOIN blog ON user.CustomerID = blog.CustomerID";
+
         require_once("nbbc/nbbc.php");
 
         $bbcode = new BBCode;
 
-        $sql = "SELECT * FROM Blog ORDER BY PostID DESC";
+        $sql = "SELECT blog.PostID, blog.PostTitle, blog.PostContent, blog.PostDate, user.Username FROM blog INNER JOIN user ON user.CustomerID = blog.CustomerID ORDER BY PostID DESC";
 
         $res = mysqli_query($conn, $sql);
 
@@ -54,17 +65,17 @@
                 $title = $row['PostTitle'];
                 $content = $row['PostContent'];
                 $date = $row['PostDate'];
+                $username = $row["Username"];
 
                 $output = $bbcode->Parse($content);
                 if ($_SESSION['admin'] ==1 ) {
                     $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
                 }
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>posted on $date</p>$admin</div>";
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>posted by $username on $date</p></div>";
             }
             echo $posts;
         } else {
-            echo "There are no posts on the blog to view.
-            ";
+            echo "There are no posts on the blog to view.";
         }
       ?>
 

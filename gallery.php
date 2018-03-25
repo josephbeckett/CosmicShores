@@ -15,64 +15,81 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	  <style>
-		  body{
-		  	background-color: #a7adba;
-		  }
-	  </style>
-
+    <video playsinline autoplay muted loop id="bgvid">
+      <source src="images/CosmicShores.mp4" type="video/mp4">
+    </video>
 
   </head>
 
   <body>
 
-<!-- Navbar -->
-<!-- Header -->
-<?php
-    if($row['Admin'] == 1) {
-      include('adminnav.php');
-    } else {
-      include('usernav.php');
-    }
-?>
+  <!-- Navbar -->
+  <?php
+      if($row['Admin'] == 1) {
+        include('adminnav.php');
+      } else {
+        include('usernav.php');
+      }
+  ?>
+  <div class="center">
+  <?php
 
-<!-- Parallax -->
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax1.jpeg"></div>
+    $sql = "SELECT photos.ImageID, photos.Image, photos.ImageDate, user.Username FROM photos INNER JOIN user WHERE user.CustomerID = photos.CustomerID ORDER BY ImageID DESC";
+
+    $res = mysqli_query($conn, $sql);
+
+    $posts = "";
+
+    if (mysqli_num_rows($res) > 0) {
+        while($row = mysqli_fetch_assoc($res)) {
+            $photoid = $row['ImageID'];
+            $image = $row['Image'];
+            $date = $row['ImageDate'];
+            $username = $row['Username'];
+
+            if ($_SESSION['admin'] ==1 ) {
+                $admin = "<div><a href='delphoto.php?photoid=$photoid'>Delete</a></div>";
+            }
+            $posts .= "<div class='row'>
+                        <div class='col s12 m12 l12'>
+                          <div class='container'>
+                            <a href='gallery.php?photoid=$photoid'>
+                            <img height='600' width='800' src='uploadedimages/$image'/></a>
+                            <p class='flow-text'>posted by $username on $date</p>$admin
+                          </div>
+                        </div>
+                      </div>";
+        }
+        echo $posts;
+    } else {
+        echo "There are no photos to view in the gallery.";
+    }
+  ?>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="center">
+        <form action="uploadphoto.php" method="post" enctype="multipart/form-data">
+          <div class="col s8 m8 l8">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>File</span>
+                <input type="file" name="fileToUpload" id="fileToUpload"/>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col s4 m4 l4">
+            <input class="waves-effect waves-light btn" type="submit" value="submit" name="submit"></input>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="section">
-        <div class="row container">
-            <h2 class="header flow-text">DSLR Camera Photos</h2>
-            <a href="DLSRPhotos.html"class="waves-effect waves-light btn">See More</a>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax2.jpeg"></div>
-    </div>
-    <div class="section">
-        <div class="row container">
-            <h2 class="header flow-text">Normal Telescope Photos</h2>
-            <a href="NormalTelescopePhotos.html" class="waves-effect waves-light btn">See More</a>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax3.jpg"></div>
-    </div>
-    <div class="section">
-        <div class="row container">
-            <h2 class="header flow-text">Refraction Telescope</h2>
-            <a href="RefractionPhotos.html" class="waves-effect waves-light btn">See More</a>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax4.jpg"></div>
-    </div>
-    <div class="section ">
-        <div class="row container">
-            <h2 class="header flow-text">Reflection Telescope</h2>
-            <a href="ReflectionPhotos.html" class="waves-effect waves-light btn">See More</a>
-        </div>
-    </div>
+  </div>
+
+
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

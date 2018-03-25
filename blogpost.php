@@ -5,10 +5,11 @@
 
         $title = mysqli_real_escape_string($conn, $_POST['PostTitle']);
         $content = mysqli_real_escape_string($conn, $_POST['PostContent']);
-
         $date = date('l jS \of F Y h:i:s A');
 
-        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate) VALUES ('$title', '$content', '$date')";
+        $uid = $_SESSION['login_user'];
+
+        $sql = "INSERT into Blog (PostTitle, PostContent, PostDate, CustomerID) VALUES ('$title', '$content', '$date', '$uid')";
 
         if($title == "" || $content == "") {
             echo "Please complete your post!";

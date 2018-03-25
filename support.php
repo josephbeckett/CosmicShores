@@ -1,6 +1,5 @@
 <?php
-// include("supportticket.php");
-session_start();
+include 'session.php';
 ?>
 <html>
   <head>
@@ -26,10 +25,15 @@ session_start();
             <source src="images/CosmicShores.mp4" type="video/mp4">
     </video>
 
-<!-- Header -->
-<?php
-  include 'normalnav.php';
- ?>
+    <!-- Navbar -->
+    <?php
+        if($row['Admin'] == 1) {
+          include('adminnav.php');
+        } else {
+          include('usernav.php');
+        }
+    ?>
+
     <!-- Content -->
     <div class="container font center">
       <div class="col s12 m12 l3">
@@ -51,10 +55,6 @@ session_start();
       <div class="input-field">
         <textarea name="txtProblemContent" class="materialize-textarea" required data-length="500"></textarea>
 				<label for="txtProblemContent">Problem Content</label>
-			</div>
-      <div class="input-field">
-        <input type="text" name="txtProblemValidation" class="validate" required data-length="100">
-        <label for="txtProblemValidation" data-error="wrong" data-success="right">Enter Email</label>
 			</div>
 			<button class="waves-effect waves-light btn" type="submit" name="submit">Submit</button>
 		</div>

@@ -47,52 +47,50 @@ if ($_SESSION['admin'] != 1 ) {
 
     <div class="row">
       <div class="container">
-        <!-- <div class="col s6 m6 l6"> -->
-          <div class="center">
-            <h1 class="flow-text">Support Tickets</h1>
-            <?php
-              require_once("nbbc/nbbc.php");
+        <div class="center">
+          <h1 class="flow-text">Support Tickets</h1>
+          <?php
+            require_once("nbbc/nbbc.php");
 
-              $bbcode = new BBCode;
+            $bbcode = new BBCode;
 
-              $sql = "SELECT * FROM Support ORDER BY SupportID DESC";
+            $sql = "SELECT support.SupportID, support.PostTitle, support.PostDescription, support.PostContent, support.PostDate, user.Username FROM support INNER JOIN user WHERE user.CustomerID = support.CustomerID ORDER BY SupportID DESC";
 
-              $res = mysqli_query($conn, $sql);
+            $res = mysqli_query($conn, $sql);
 
-              $posts = "";
+            $posts = "";
 
-              if (mysqli_num_rows($res) > 0) {
-                  while($row = mysqli_fetch_assoc($res)) {
-                      $id = $row['SupportID'];
-                      $title = $row['PostTitle'];
-                      $description = $row['PostDescription'];
-                      $content = $row['PostContent'];
-                      $email = $row['PostValidation'];
-                      $date = $row['PostDate'];
-
-
-                      $outputtitle = $bbcode->Parse($title);
-                      $outputdescrip = $bbcode->Parse($description);
-                      $outputcontent = $bbcode->Parse($content);
+            if (mysqli_num_rows($res) > 0) {
+                while($row = mysqli_fetch_assoc($res)) {
+                    $id = $row['SupportID'];
+                    $title = $row['PostTitle'];
+                    $description = $row['PostDescription'];
+                    $content = $row['PostContent'];
+                    $date = $row['PostDate'];
+                    $username = $row['Username'];
 
 
-                      if ($_SESSION['admin'] == 1 ) {
-                          $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
-                      }
-                      $posts .= "<div class='container'>
-                        <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
-                        <p class='flow-text'>$outputdescrip</p>
-                        <p class='flow-text'>$outputcontent</p>
-                        <p class='flow-text'> submitted by $email at : $date</p>$admin
-                        </div>";
-                  }
-                  echo $posts;
-              } else {
-                  echo "There are no Support tickets to display";
-              }
-            ?>
-          </div>
-        <!-- </div> -->
+                    $outputtitle = $bbcode->Parse($title);
+                    $outputdescrip = $bbcode->Parse($description);
+                    $outputcontent = $bbcode->Parse($content);
+
+
+                    if ($_SESSION['admin'] == 1 ) {
+                        $admin = "<div><a href='delsupportpost.php?pid=$id'>Delete</a></div>";
+                    }
+                    $posts .= "<div class='container'>
+                      <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
+                      <p class='flow-text'>$outputdescrip</p>
+                      <p class='flow-text'>$outputcontent</p>
+                      <p class='flow-text'> submitted by $username at : $date</p>$admin
+                      </div>";
+                }
+                echo $posts;
+            } else {
+                echo "There are no Support tickets to display";
+            }
+          ?>
+        </div>
       </div>
     </div>
     <!--Import jQuery before materialize.js-->

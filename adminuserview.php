@@ -43,58 +43,58 @@
         }
     ?>
     <div class="row">
-        <div class="container">
-          <div class="col s6 m6 l6">
-          <div class="center">
-            <h1 class="flow-text">User Accounts</h1>
-          <?php
+      <div class="container">
+        <div class="center">
+          <h1 class="flow-text">User Accounts</h1>
+        <?php
 
-            $sql = "SELECT * FROM User ORDER BY CustomerID ASC";
+          $sql = "SELECT * FROM User ORDER BY CustomerID ASC";
 
-            $res = mysqli_query($conn, $sql);
+          $res = mysqli_query($conn, $sql);
 
-            $users = "";
+          $users = "";
 
-            if (mysqli_num_rows($res) > 0) {
-                while($row = mysqli_fetch_assoc($res)) {
-                    $customerid = $row['CustomerID'];
-                    $username = $row['Username'];
-                    $firstname = $row['FirstName'];
-                    $lastname = $row['LastName'];
-                    $email = $row['Email'];
-                    $adminsetting = $row['Admin'];
+          if (mysqli_num_rows($res) > 0) {
+              while($row = mysqli_fetch_assoc($res)) {
+                  $customerid = $row['CustomerID'];
+                  $username = $row['Username'];
+                  $firstname = $row['FirstName'];
+                  $lastname = $row['LastName'];
+                  $email = $row['Email'];
+                  $adminsetting = $row['Admin'];
 
 
-                    if ($_SESSION['admin'] == 1 ) {
-                        $admin = "<div><a href='admindeluser.php?uid=$customerid'>Delete User</a>&nbsp;<a href='adminedituser.php?uid=$customerid'>Edit User</a></div>";
-                    }
+                  if ($_SESSION['admin'] == 1 ) {
+                      $admin = "<div><a href='admindeluser.php?uid=$customerid'>Delete User</a>&nbsp;<a href='adminedituser.php?uid=$customerid'>Edit User</a></div>";
+                  }
 
-                    $users.= "
-                      <div class='row'>
-
-                          <div class='card blue-grey darken-2'>
-                            <div class='card-content white-text'>
-                              <p>CustomerID: $customerid</p>
-                              <p>Username: $username</p>
-                              <p>Firstname: $firstname</p>
-                              <p>Surname: $lastname</p>
-                              <p>Email: $email</p>
-                              <p>Admin: $adminsetting</p>
-                          </div>
-                          <div class='card-action'>
-                            $admin
-                          </div>
+                  $users.= "
+                    <div class='row'>
+                      <div class='container'>
+                      <div class='col s12'>
+                        <div class='card blue-grey darken-2'>
+                          <div class='card-content white-text'>
+                            <p>CustomerID: $customerid</p>
+                            <p>Username: $username</p>
+                            <p>Firstname: $firstname</p>
+                            <p>Surname: $lastname</p>
+                            <p>Email: $email</p>
+                            <p>Admin: $adminsetting</p>
                         </div>
-
+                        <div class='card-action'>
+                          $admin
+                        </div>
+                      </div>
                     </div>
-                      ";
-                }
-                echo $users;
-            } else {
-                echo "There are no Support tickets to display";
-            }
-          ?>
-          </div>
+                    </div>
+                  </div>
+                    ";
+              }
+              echo $users;
+          } else {
+              echo "There are no Support tickets to display";
+          }
+        ?>
         </div>
       </div>
     </div>
