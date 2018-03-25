@@ -54,7 +54,7 @@
                         <div class='col s12 m12 l12'>
                           <div class='container'>
                             <a href='gallery.php?photoid=$photoid'>
-                            <img height='600' width='800' src='uploadedimages/$image'/></a>
+                            <img src='uploadedimages/$image'/></a>
                             <p class='flow-text'>posted by $username on $date</p>$admin
                           </div>
                         </div>
@@ -81,11 +81,11 @@
               </div>
             </div>
           </div>
-          <div class="col s4 m4 l4">
-            <div class="waves-effect waves-light btn">
-              <input type="submit"></input>
+            <div class="col s4 m4 l4">
+              <div>
+                <button class="waves-effect waves-light btn" type="submit" name="Submit ">Upload</button>
+              </div>
             </div>
-          </div>
         </form>
       </div>
     </div>
