@@ -82,7 +82,8 @@
             </div>
           </div>
           <div class="col s4 m4 l4">
-            <input class="waves-effect waves-light btn" type="submit" value="submit" name="submit"></input>
+            <span>Upload</span>
+            <input class="waves-effect waves-light btn" type="submit" name="submit"></input>
           </div>
         </form>
       </div>
