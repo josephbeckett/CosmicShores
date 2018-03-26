@@ -16,10 +16,10 @@ if(isset($_POST['submit'])) {
     VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$mycurrentdate', '$uid')";
     if (mysqli_query($conn, $sql)) {
         echo "Ticket successfully submitted";
-        if (isset($_SESSION['admin'] == 1)) {
-          header("Location: admin.php");
-        } else {
+        if (!isset($_SESSION['admin'] == 1)) {
           header("Location: loginhomepage.php");
+        } else {
+          header("Location: admin.php");
         }
     } else {
         echo "Unable to submit ticket";
