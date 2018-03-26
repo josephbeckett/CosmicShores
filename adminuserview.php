@@ -72,7 +72,7 @@
                     <div class='row'>
                       <div class='container'>
                       <div class='col s12'>
-                        <div class='card #353c46'>
+                        <div class='card cyan accent-4'>
                           <div class='card-content white-text'>
                             <p>CustomerID: $customerid</p>
                             <p>Username: $username</p>
