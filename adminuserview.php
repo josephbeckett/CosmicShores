@@ -73,7 +73,6 @@
                       <div class='container'>
                       <div class='col s12'>
                         <div class='card blue-grey darken-2'>
-                          <div class='card-content white-text'>
                             <table>
                               <tr>
                                 <th>CustomerID</th>
@@ -92,7 +91,6 @@
                                 <td>$adminsetting</td>
                               </tr>
                             </table>
-                        </div>
                         <div class='card-action'>
                           $admin
                         </div>
