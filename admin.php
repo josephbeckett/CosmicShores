@@ -49,6 +49,7 @@ if ($_SESSION['admin'] != 1 ) {
       <div class="container">
         <div class="center">
           <h1 class="flow-text">Support Tickets</h1>
+          <a href='truncatesupport.php'>Delete All</a>
           <?php
             require_once("nbbc/nbbc.php");
 
@@ -76,7 +77,7 @@ if ($_SESSION['admin'] != 1 ) {
 
 
                     if ($_SESSION['admin'] == 1 ) {
-                        $admin = "<div><a href='delsupportpost.php?supportid=$supportid'>Delete</a>&nbsp;<a href='truncatesupport.php'>Delete All</a></div>";
+                        $admin = "<div><a href='delsupportpost.php?supportid=$supportid'>Delete</a></div>";
                     }
                     $posts .= "<div class='container'>
                       <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
