@@ -76,7 +76,7 @@ if ($_SESSION['admin'] != 1 ) {
 
 
                     if ($_SESSION['admin'] == 1 ) {
-                        $admin = "<div><a href='delsupportpost.php?supportid=$supportid'>Delete</a></div>&nbsp;<a href='truncatesupport.php'>Delete All</a></div>";
+                        $admin = "<div><a href='delsupportpost.php?supportid=$supportid'>Delete</a>&nbsp;<a href='truncatesupport.php'>Delete All</a></div>";
                     }
                     $posts .= "<div class='container'>
                       <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
