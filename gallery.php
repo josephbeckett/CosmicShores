@@ -80,8 +80,8 @@
                 <div class="file-path-wrapper">
                   <input class="file-path validate" type="text">
                 </div>
+                <button class="waves-effect waves-light btn" type="submit" name="Submit ">Upload</button>
               </div>
-              <button class="waves-effect waves-light btn" type="submit" name="Submit ">Upload</button>
             </div>
           </div>
         </form>
