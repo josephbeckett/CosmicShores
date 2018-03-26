@@ -24,7 +24,7 @@ include("userdetails.php");
 <!-- Page loading transition -->
     <div class="preloader-background">
         <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue-only"> 
+            <div class="spinner-layer spinner-blue-only">
                 <div class="circle-clipper left">
                 <div class="circle"></div>
                 </div><div class="gap-patch">
@@ -53,6 +53,7 @@ include("userdetails.php");
     <div class="container font center">
         <div class="col s12 m12 l3">
             <h1>Welcome <?php echo $row["Username"]; ?></h1>
+            <h4><?php echo $info; ?></h4>
         </div>
     </div>
 
