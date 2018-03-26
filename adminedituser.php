@@ -4,7 +4,7 @@
       header("Location: login.php");
     }
     if(!isset($_GET['uid'])) {
-        header("Location: admin.php");
+        header("Location: adminuserview.php");
     }
 
     $uid = $_GET['uid'];
