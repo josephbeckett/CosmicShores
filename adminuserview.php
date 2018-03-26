@@ -74,7 +74,7 @@
                       <div class='col s12'>
                         <div class='card blue-grey darken-2'>
                           <div class='card-content white-text'>
-                            <table>
+                            <table class='flow-text'>
                               <tr>
                                 <th>CustomerID</th>
                                 <th>Username</th>
@@ -90,7 +90,7 @@
                                 <td>$lastname</td>
                                 <td>$email</td>
                                 <td>$adminsetting</td>
-                              </tr>  
+                              </tr>
                             </table>
                         </div>
                         <div class='card-action'>
