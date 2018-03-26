@@ -14,7 +14,6 @@ if ($_SESSION['admin'] != $row['Admin']) {
             <li><a href='adminuserview.php'>User Accounts List</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="gallery.php">Gallery</a></li>
-            <li><a href="support.php">Support</a></li>
             <li><a href="logout.php">Sign out</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -23,7 +22,6 @@ if ($_SESSION['admin'] != $row['Admin']) {
             <li><a href='adminuserview.php'>User Accounts List</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="gallery.php">Gallery</a></li>
-            <li><a href="support.php">Support</a></li>
             <li><a href="logout.php">Sign out</a></li>
         </ul>
     </div>
