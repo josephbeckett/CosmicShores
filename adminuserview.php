@@ -81,7 +81,7 @@
                             <p>Email: $email</p>
                             <p>Admin: $adminsetting</p>
                         </div>
-                        <div class='card-action'>
+                        <div class='card-action white-text'>
                           $admin
                         </div>
                       </div>
