@@ -105,11 +105,6 @@ html {
 	background: #34636d;
 }
 
-.submitbutton {
-  padding-top: 50px;
-  margin-top: 50px;
-}
-
 /* The message box is shown when the user clicks on the password field */
 #message {
     display:none;
