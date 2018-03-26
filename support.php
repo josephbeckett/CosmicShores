@@ -59,6 +59,7 @@ include 'session.php';
 			<button class="waves-effect waves-light btn" type="submit" name="submit">Submit</button>
 		</div>
 	</form>
+  <?php echo $info; ?>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
