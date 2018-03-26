@@ -77,6 +77,7 @@ $info = "";
                                 <option value="Novice">Novice</option>
                                 <option value="Hobbyist">Hobbyist</option>
                                 <option value="Competent">Competent</option>
+                                <option value="Professional">Professional</option>
                             </select>
                             <label data-error="wrong" data-success="right" ></label>
                         </div>

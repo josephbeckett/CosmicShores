@@ -70,20 +70,22 @@
     <div class="container">
       <div class="center">
         <form action="uploadphoto.php" method="post" enctype="multipart/form-data">
-          <div class="col s8 m8 l8">
-            <div class="file-field input-field">
-              <div class="waves-effect waves-light btn">
-                <span>File</span>
-                <input type="file" name="fileToUpload" id="fileToUpload"/>
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
+          <div class="row">
+            <div class="col s8 m8 l8">
+              <div class="file-field input-field">
+                <div class="waves-effect waves-light btn">
+                  <span>File</span>
+                  <input type="file" name="fileToUpload" id="fileToUpload"/>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
               </div>
             </div>
-          </div>
-            <div class="col s4 m4 l4">
-              <div>
-                <button class="waves-effect waves-light btn" type="submit" name="Submit ">Upload</button>
+              <div class="col s4 m4 l4">
+                <div>
+                  <button class="waves-effect waves-light btn" type="submit" name="Submit ">Upload</button>
+                </div>
               </div>
             </div>
         </form>
