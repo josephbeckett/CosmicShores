@@ -74,12 +74,24 @@
                       <div class='col s12'>
                         <div class='card blue-grey darken-2'>
                           <div class='card-content white-text'>
-                            <p>CustomerID: $customerid</p>
-                            <p>Username: $username</p>
-                            <p>Firstname: $firstname</p>
-                            <p>Surname: $lastname</p>
-                            <p>Email: $email</p>
-                            <p>Admin: $adminsetting</p>
+                            <table>
+                              <tr>
+                                <th>CustomerID</th>
+                                <th>Username</th>
+                                <th>Firstname</th>
+                                <th>Surname</th>
+                                <th>Email</th>
+                                <th>Admin</th>
+                              </tr>
+                              <tr>
+                                <td>$customerid</td>
+                                <td>$username</td>
+                                <td>$firstname</td>
+                                <td>$lastname</td>
+                                <td>$email</td>
+                                <td>$adminsetting</td>
+                              </tr>  
+                            </table>
                         </div>
                         <div class='card-action'>
                           $admin
