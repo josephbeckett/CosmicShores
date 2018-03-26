@@ -74,7 +74,7 @@
                       <div class='col s12'>
                         <div class='card blue-grey darken-2'>
                           <div class='card-content white-text'>
-                            <table class='flow-text'>
+                            <table>
                               <tr>
                                 <th>CustomerID</th>
                                 <th>Username</th>
