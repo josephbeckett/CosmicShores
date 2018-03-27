@@ -40,6 +40,8 @@
       <div class="container">
         <div class="center">
           <h1 class="flow-text">User Accounts</h1>
+          <h4> <?php display_deluseraccount_message(); ?></h4>
+          <h4> <?php display_updateuseraccount_message(); ?></h4>
         <?php
 
           $sql = "SELECT * FROM User ORDER BY CustomerID ASC";

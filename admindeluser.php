@@ -6,8 +6,11 @@
     } else {
         $custid = $_GET['custid'];
         $sql = "DELETE FROM User WHERE CustomerID = $custid";
-        mysqli_query($conn, $sql);
+        if(mysqli_query($conn, $sql)){
+          set_deluseraccount_message("User account successfully deleted");
+        } else {
+          set_deluseraccount_message("Unable to delete user account");
+        }
         header('Location: adminuserview.php');
-        $info = "User Deleted Successfully!";
     }
 ?>

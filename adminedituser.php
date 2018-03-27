@@ -22,7 +22,11 @@
 
       $sql = "UPDATE User SET Username = '$myusername', FirstName = '$myfirstname', LastName = '$mylastname', Email =
       '$myemail', DOB = '$mydob', Admin = '$myadmin' WHERE CustomerID = '$custid' ";
-      mysqli_query($conn, $sql);
+      if(mysqli_query($conn, $sql)) {
+          set_updateuseraccount_message("User account successfully updated");
+      } else {
+        set_updateuseraccount_message("Unable to update user account");
+      }
       header("Location: adminuserview.php");
     }
 

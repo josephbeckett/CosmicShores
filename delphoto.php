@@ -9,17 +9,19 @@
         $file = "uploadedimages/$photoid";
         if (!unlink($file))
           {
-          echo ("Error deleting $file");
+          set_delgallerypost_message("Error deleting $file");
           }
         else
           {
-          echo ("Deleted $file");
+          set_delgallerypost_message("Deleted $file");
           }
         $photoid = $_GET['photoid'];
         $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
-        mysqli_query($conn, $sql);
-
-
+        if(mysqli_query($conn, $sql)) {
+            set_delgallerypost_message("Image deleted successfully");
+        } else {
+            set_delgallerypost_message("Unable to delete image");
+        }
         header('Location: gallery.php');
     }
 

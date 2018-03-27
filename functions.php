@@ -55,6 +55,90 @@ function update_blogpost_message() {
       unset($_SESSION['updateblogpostmessage']);
     }
 }
+function set_delsupportticket_message($delsupportticketmessage) {
+    if(!empty($delsupportticketmessage)) {
+        $_SESSION['delsupportticketmessage'] = $delsupportticketmessage;
+    }
+    else {
+        $delsupportticketmessage = "";
+    }
+}
+function display_delsupportticket_message() {
+  if(isset($_SESSION['delsupportticketmessage'])) {
+      echo $_SESSION['delsupportticketmessage'];
+      unset($_SESSION['delsupportticketmessage']);
+    }
+}
+function set_delallsupportticket_message($delallsupportticketmessage) {
+    if(!empty($delallsupportticketmessage)) {
+        $_SESSION['delallsupportticketmessage'] = $delallsupportticketmessage;
+    }
+    else {
+        $delallsupportticketmessage = "";
+    }all
+}
+function display_delallsupportticket_message() {
+  if(isset($_SESSION['delallsupportticketmessage'])) {
+      echo $_SESSION['delallsupportticketmessage'];
+      unset($_SESSION['delallsupportticketmessage']);
+    }
+}
+function set_deluseraccount_message($deluseraccountmessage) {
+    if(!empty($deluseraccountmessage)) {
+        $_SESSION['deluseraccountmessage'] = $deluseraccountmessage;
+    }
+    else {
+        $deluseraccountmessage = "";
+    }all
+}
+function display_deluseraccount_message() {
+  if(isset($_SESSION['deluseraccountmessage'])) {
+      echo $_SESSION['deluseraccountmessage'];
+      unset($_SESSION['deluseraccountmessage']);
+    }
+}
+function set_updateuseraccount_message($updateuseraccountmessage) {
+    if(!empty($updateuseraccountmessage)) {
+        $_SESSION['updateuseraccountmessage'] = $updateuseraccountmessage;
+    }
+    else {
+        $updateuseraccountmessage = "";
+    }all
+}
+function display_updateuseraccount_message() {
+  if(isset($_SESSION['updateuseraccountmessage'])) {
+      echo $_SESSION['updateuseraccountmessage'];
+      unset($_SESSION['updateuseraccountmessage']);
+    }
+}
+function set_gallerypost_message($gallerypostmessage) {
+    if(!empty($gallerypostmessage)) {
+        $_SESSION['gallerypostmessage'] = $gallerypostmessage;
+    }
+    else {
+        $gallerypostmessage = "";
+    }all
+}
+function display_gallerypost_message() {
+  if(isset($_SESSION['gallerypostmessage'])) {
+      echo $_SESSION['gallerypostmessage'];
+      unset($_SESSION['gallerypostmessage']);
+    }
+}
+function set_delgallerypost_message($delgallerypostmessage) {
+    if(!empty($gallerypostmessage)) {
+        $_SESSION['delgallerypostmessage'] = $delgallerypostmessage;
+    }
+    else {
+        $delgallerypostmessage = "";
+    }all
+}
+function display_delgallerypost_message() {
+  if(isset($_SESSION['delgallerypostmessage'])) {
+      echo $_SESSION['delgallerypostmessage'];
+      unset($_SESSION['delgallerypostmessage']);
+    }
+}
 
 
  ?>

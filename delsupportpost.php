@@ -6,7 +6,11 @@
     } else {
         $supportid = $_GET['supportid'];
         $sql = "DELETE FROM Support WHERE SupportID = $supportid";
-        mysqli_query($conn, $sql);
+        if(mysqli_query($conn, $sql)) {
+          set_delsupportticket_message("Support ticket successfully deleted");
+        } else {
+          set_delsupportticket_message("Couldn't delete support ticket");
+        }
         header('Location: admin.php');
     }
 
