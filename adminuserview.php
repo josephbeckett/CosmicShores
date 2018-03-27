@@ -3,12 +3,6 @@
   if ($_SESSION['admin'] != 1 ) {
     header("Location: login.php");
   }
-
-// if(!isset($_GET['uid'])) {
-//     header("Location: signup.php");
-// }
-//
-// $pid = $_GET['uid'];
 ?>
 <html>
   <head>
