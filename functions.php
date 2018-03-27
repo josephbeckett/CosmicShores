@@ -13,12 +13,12 @@ function support_display_message() {
         unset($_SESSION['supportmessage']);
     }
 }
-function set_updatedetails_message() {
-    if(!empty($supportmessage)) {
-        $_SESSION['supportmessage'] = $supportmessage;
+function set_updatedetails_message($updatedetails) {
+    if(!empty($updatedetails)) {
+        $_SESSION['updatedetails'] = $updatedetails;
     }
     else {
-        $supportmessage = "";
+        $updatedetails = "";
     }
 }
 function update_details_message() {
