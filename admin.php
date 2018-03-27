@@ -4,6 +4,8 @@ if ($_SESSION['admin'] != 1 ) {
   header("Location: login.php");
 }
 
+$info = "";
+
 // if(!isset($_GET['uid'])) {
 //     header("Location: signup.php");
 // }
