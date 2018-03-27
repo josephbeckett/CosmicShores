@@ -33,7 +33,8 @@
   ?>
   <div class="center">
     <h1>Gallery</h1>
-    <h4> <?php  ?></h4>
+    <h4> <?php display_gallerypost_message(); ?></h4>
+    <h4> <?php display_delgallerypost_message(); ?></h4>
   <?php
 
     $sql = "SELECT Photos.ImageID, Photos.Image, Photos.ImageDate, User.Username FROM Photos INNER JOIN User WHERE User.CustomerID = Photos.CustomerID ORDER BY ImageID DESC";
