@@ -43,7 +43,7 @@ function post_blogpost_message() {
 }
 function set_updateblogpost_message($updateblogpostmessage) {
     if(!empty($updateblogpostmessage)) {
-        $_SESSION['blogpostmessage'] = $updateblogpostmessage;
+        $_SESSION['updateblogpostmessage'] = $updateblogpostmessage;
     }
     else {
         $updateblogpostmessage = "";
@@ -57,7 +57,7 @@ function update_blogpost_message() {
 }
 function set_delblogpost_message($delblogpostmessage) {
     if(!empty($delblogpostmessage)) {
-        $_SESSION['delblogpostmessag'] = $delblogpostmessage;
+        $_SESSION['delblogpostmessage'] = $delblogpostmessage;
     }
     else {
         $delblogpostmessage = "";
