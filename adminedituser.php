@@ -5,9 +5,11 @@
     }
     if(!isset($_GET['custid'])) {
         header("Location: adminuserview.php");
+    } else {
+      $custid = $_GET['custid'];
     }
 
-    $custid = $_GET['custid'];
+
 
     if(isset($_POST['update'])) {
       $myusername =mysqli_real_escape_string($conn,$_POST["txtUsername"]);
@@ -54,7 +56,7 @@
         ?>
         <?php
 
-        $sql_get = "SELECT * FROM User WHERE CustomerID = '$custid' ";
+        $sql_get = "SELECT * FROM User WHERE CustomerID = '$custid'";
         $res = mysqli_query($conn, $sql_get);
 
         if(mysqli_num_rows($res) > 0) {
@@ -69,7 +71,7 @@
         }
 
 
-		echo "<form action='adminedituser.php?uid=$uid' method='post' enctype='multipart/form-data'>";
+		echo "<form action='adminedituser.php?custid=$custid' method='post' enctype='multipart/form-data'>";
     include 'userform.php';
         ?>
 				      <button class="waves-effect waves-light btn" name="update" type="submit">Update</button>
