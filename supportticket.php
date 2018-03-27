@@ -9,6 +9,9 @@ if(isset($_POST['submit'])) {
     $myproblemsubtitle = mysqli_real_escape_string($conn,$_POST["txtProblemSubtitle"]);
     $myproblemcontent = mysqli_real_escape_string($conn,$_POST["txtProblemContent"]);
     $mycurrentdate = date('H:i d-m-Y');
+    $useremail = $_SESSION['useremail'];
+
+    include 'supportemail.php';
 
     $uid = $_SESSION['login_user'];
 

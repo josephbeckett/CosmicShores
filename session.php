@@ -11,6 +11,8 @@
     $_SESSION['admin'] = $row['Admin'];
 
     $_SESSION['uid'] = $row['CustomerID'];
+    
+    $_SESSION['useremail'] = $row['Email'];
 
     if(!isset($_SESSION["login_user"])){
         header("location: login.php");
