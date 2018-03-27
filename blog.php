@@ -41,6 +41,7 @@
       <h4>Blog Posts</h4>
       <h6><?php post_blogpost_message(); ?></h6>
       <h6><?php update_blogpost_message(); ?></h6>
+      <h6><?php display_delblogpost_message(); ?></h6>
       <?php
         // $sql1 = " SELECT user.Username
         //   FROM user

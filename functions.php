@@ -55,6 +55,20 @@ function update_blogpost_message() {
       unset($_SESSION['updateblogpostmessage']);
     }
 }
+function set_delblogpost_message($delblogpostmessage) {
+    if(!empty($delblogpostmessage)) {
+        $_SESSION['delblogpostmessag'] = $delblogpostmessage;
+    }
+    else {
+        $delblogpostmessage = "";
+    }
+}
+function display_delblogpost_message() {
+  if(isset($_SESSION['delblogpostmessage'])) {
+      echo $_SESSION['delblogpostmessage'];
+      unset($_SESSION['delblogpostmessage']);
+    }
+}
 function set_delsupportticket_message($delsupportticketmessage) {
     if(!empty($delsupportticketmessage)) {
         $_SESSION['delsupportticketmessage'] = $delsupportticketmessage;
