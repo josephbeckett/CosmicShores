@@ -75,7 +75,7 @@ function set_delallsupportticket_message($delallsupportticketmessage) {
     }
     else {
         $delallsupportticketmessage = "";
-    }all
+    }
 }
 function display_delallsupportticket_message() {
   if(isset($_SESSION['delallsupportticketmessage'])) {
@@ -89,7 +89,7 @@ function set_deluseraccount_message($deluseraccountmessage) {
     }
     else {
         $deluseraccountmessage = "";
-    }all
+    }
 }
 function display_deluseraccount_message() {
   if(isset($_SESSION['deluseraccountmessage'])) {
@@ -103,7 +103,7 @@ function set_updateuseraccount_message($updateuseraccountmessage) {
     }
     else {
         $updateuseraccountmessage = "";
-    }all
+    }
 }
 function display_updateuseraccount_message() {
   if(isset($_SESSION['updateuseraccountmessage'])) {
@@ -117,7 +117,7 @@ function set_gallerypost_message($gallerypostmessage) {
     }
     else {
         $gallerypostmessage = "";
-    }all
+    }
 }
 function display_gallerypost_message() {
   if(isset($_SESSION['gallerypostmessage'])) {
@@ -131,7 +131,7 @@ function set_delgallerypost_message($delgallerypostmessage) {
     }
     else {
         $delgallerypostmessage = "";
-    }all
+    }
 }
 function display_delgallerypost_message() {
   if(isset($_SESSION['delgallerypostmessage'])) {
