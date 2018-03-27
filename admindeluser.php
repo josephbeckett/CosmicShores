@@ -1,12 +1,11 @@
 <?php
     include("session.php");
 
-    if (!isset($_GET['uid'])) {
+    if (!isset($_GET['custid'])) {
         header('Location: adminuserview.php');
     } else {
-        $uid = $_GET['uid'];
-        $sql = "DELETE * FROM CustomerID = $uid
-                ";
+        $custid = $_GET['custid'];
+        $sql = "DELETE * FROM CustomerID = $custid";
         mysqli_query($conn, $sql);
         header('Location: adminuserview.php');
         $info = "User Deleted Successfully!";

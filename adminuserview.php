@@ -65,7 +65,7 @@
 
 
                   if ($_SESSION['admin'] == 1 ) {
-                      $admin = "<div><a href='admindeluser.php?uid=$customerid'>Delete User</a>&nbsp;<a href='adminedituser.php?uid=$customerid'>Edit User</a></div>";
+                      $admin = "<div><a href='admindeluser.php?custid=$customerid'>Delete User</a>&nbsp;<a href='adminedituser.php?custid=$customerid'>Edit User</a></div>";
                   }
 
                   $users.= "
