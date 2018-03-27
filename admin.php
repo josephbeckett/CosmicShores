@@ -55,7 +55,7 @@ if ($_SESSION['admin'] != 1 ) {
 
             $bbcode = new BBCode;
 
-            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, User.Username
+            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, User.Email
                     FROM Support INNER JOIN User WHERE User.CustomerID = Support.CustomerID ORDER BY SupportID DESC";
 
             $res = mysqli_query($conn, $sql);
@@ -69,7 +69,7 @@ if ($_SESSION['admin'] != 1 ) {
                     $description = $row['PostDescription'];
                     $content = $row['PostContent'];
                     $date = $row['PostDate'];
-                    $username = $row['Username'];
+                    $useremail = $row['Email'];
 
 
                     $outputtitle = $bbcode->Parse($title);
@@ -84,7 +84,7 @@ if ($_SESSION['admin'] != 1 ) {
                       <h4 class='flow-text'><a href='support.php?supportid=$supportid'>$outputtitle</a></h4>
                       <p class='flow-text'>$outputdescrip</p>
                       <p class='flow-text'>$outputcontent</p>
-                      <p class='flow-text'> submitted by $username at : $date</p>$admin
+                      <p class='flow-text'> submitted by $useremail at : $date</p>$admin
                       </div>";
                 }
                 echo $posts;

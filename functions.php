@@ -13,4 +13,5 @@ function display_message() {
         unset($_SESSION['supportmessage']);
     }
 }
+
  ?>
