@@ -13,6 +13,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myquestionanswer = mysqli_real_escape_string($conn,$_POST["txtQuestionAnswer"]);
     $mydob = mysqli_real_escape_string($conn,$_POST["txtDOB"]);
 
+    include 'email.php';
+
     $sql = "INSERT INTO User (FirstName, LastName, Username, Password, Email, QuestionAnswer, DOB)
     VALUES ('$myfirstname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myquestionanswer', '$mydob')";
     if (mysqli_query($conn, $sql)) {

@@ -11,7 +11,6 @@
         <ul class="side-nav" id="mobile-demo">
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
-            <li><a href="support.php">Support</a></li>
             <li><a href="signup.php">Sign Up</a></li>
             <li><a href="login.php">Login</a></li>
         </ul>

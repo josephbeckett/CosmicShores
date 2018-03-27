@@ -71,7 +71,7 @@
                 if ($_SESSION['admin'] ==1 ) {
                     $admin = "<div><a href='delpost.php?pid=$id'>Delete</a>&nbsp;<a href='editpost.php?pid=$id'>Edit</a></div>";
                 }
-                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>posted by $username on $date</p></div>";
+                $posts .= "<div class='container'><h2 class='flow-text'><a href='blogpost.php?pid=$id'>$title</a></h2><p>$output</p><p class='flow-text'>posted by $username on $date</p></div>$admin";
             }
             echo $posts;
         } else {

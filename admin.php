@@ -55,7 +55,8 @@ if ($_SESSION['admin'] != 1 ) {
 
             $bbcode = new BBCode;
 
-            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, User.Username FROM Support INNER JOIN User WHERE User.CustomerID = Support.CustomerID ORDER BY SupportID DESC";
+            $sql = "SELECT Support.SupportID, Support.PostTitle, Support.PostDescription, Support.PostContent, Support.PostDate, User.Username
+                    FROM Support INNER JOIN User WHERE User.CustomerID = Support.CustomerID ORDER BY SupportID DESC";
 
             $res = mysqli_query($conn, $sql);
 
@@ -80,7 +81,7 @@ if ($_SESSION['admin'] != 1 ) {
                         $admin = "<div><a href='delsupportpost.php?supportid=$supportid'>Delete</a></div>";
                     }
                     $posts .= "<div class='container'>
-                      <h4 class='flow-text'><a href='support.php?pid=$id'>$outputtitle</a></h4>
+                      <h4 class='flow-text'><a href='support.php?supportid=$supportid'>$outputtitle</a></h4>
                       <p class='flow-text'>$outputdescrip</p>
                       <p class='flow-text'>$outputcontent</p>
                       <p class='flow-text'> submitted by $username at : $date</p>$admin
