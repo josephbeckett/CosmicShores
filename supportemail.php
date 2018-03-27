@@ -7,10 +7,9 @@
   <html>
      <head>
          <title>Support Ticket</title>
-  		<link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
-  	    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
-        <link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
-        <link type='text/css' rel='stylesheet' href='css/stylesheet.css'  media='screen,projection'/>
+         <link type='text/css' rel='stylesheet' href='css/materialize.min.css'  media='screen,projection'/>
+         <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+         <link type='text/css' rel='stylesheet' href='css/stylesheet.css'  media='screen,projection'/>
      </head>
      <body>
       <h4>Thank you for contacting Cosmich-Shores support.</h4>
