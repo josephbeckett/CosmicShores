@@ -13,8 +13,11 @@
         <link type='text/css' rel='stylesheet' href='css/stylesheet.css'  media='screen,projection'/>
      </head>
      <body>
-      <h4>Thank you sign up to Cosmic Shores Amatuer Astronomy Society</h4>
+      <h4>Thank you for becoming a member Cosmic Shores Amatuer Astronomy Society</h4>
       <p>You can now login to the website using your username and password</p>
+      <br />
+      <p>Kind Regards</p>
+      <p>The Cosmic-Shores Team</p>
      </body>
    </html>";
 

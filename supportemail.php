@@ -13,7 +13,7 @@
      </head>
      <body>
       <h4>Thank you for contacting Cosmich-Shores support.</h4>
-      <p>We will no proceed to look through the problem you have submitted, please be paintent. we will email again when your problem has hopefully been solved.</p>
+      <p>We will now proceed to look through the problem you have submitted, please be paintent.</p>
       <p>Kind Regards <br /> The Cosmic-Shores Support Team</p>
      </body>
    </html>";
