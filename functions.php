@@ -140,7 +140,7 @@ function display_gallerypost_message() {
     }
 }
 function set_delgallerypost_message($delgallerypostmessage) {
-    if(!empty($gallerypostmessage)) {
+    if(!empty($delgallerypostmessage)) {
         $_SESSION['delgallerypostmessage'] = $delgallerypostmessage;
     }
     else {
