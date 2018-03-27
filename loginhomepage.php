@@ -53,6 +53,7 @@ include("userdetails.php");
     <div class="container font center">
         <div class="col s12 m12 l3">
             <h1>Welcome <?php echo $row["Username"]; ?></h1>
+            <br />
             <h4><?php display_message(); ?></h4>
         </div>
     </div>

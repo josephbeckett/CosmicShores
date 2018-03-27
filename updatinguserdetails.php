@@ -19,10 +19,10 @@ $mydob = mysqli_real_escape_string($conn, $_POST["txtDOB"]);
 $sql = "UPDATE User SET Username = '$myusername', FirstName = '$myfirstname', LastName = '$mylastname', Email =
 '$myemail', DOB = '$mydob' WHERE CustomerID = '$_SESSION[login_user]' ";
 if (mysqli_query($conn, $sql)) {
-    $info = "Updated User successfully ";
+    set_updatedetails_message("Updated User successfully ");
     header("Location: profile.php");
 } else {
-    $info = "Error updating User: ". mysqli_error($conn);
+    set_updatedetails_message("Error updating User: ". mysqli_error($conn));
 }
 return $info;
 }
