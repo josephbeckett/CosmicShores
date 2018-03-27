@@ -18,6 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO User (FirstName, LastName, Username, Password, Email, QuestionAnswer, DOB)
     VALUES ('$myfirstname', '$mylastname', '$myusername', '$mypassword', '$myemail', '$myquestionanswer', '$mydob')";
     if (mysqli_query($conn, $sql)) {
+        header('Location: login.php');
         $info = "User Created Successfully!";
     } else {
         $info ="Unable to Add User!";
