@@ -15,8 +15,12 @@
             echo "Please complete your post!";
             return;
         }
-        mysqli_query($conn, $sql);
 
+        if (mysqli_query($conn, $sql)) {
+            set_blogpost_message("Post uploaded successfully");
+        } else {
+            set_blogpost_message("Unable to post to blog");
+        }
         header("Location: blog.php");
     }
 ?>

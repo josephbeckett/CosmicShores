@@ -27,5 +27,34 @@ function update_details_message() {
       unset($_SESSION['updatedetails']);
     }
 }
+function set_blogpost_message($blogpostmessage) {
+    if(!empty($blogpostmessage)) {
+        $_SESSION['blogpostmessage'] = $blogpostmessage;
+    }
+    else {
+        $blogpostmessage = "";
+    }
+}
+function post_blogpost_message() {
+  if(isset($_SESSION['blogpostmessage'])) {
+      echo $_SESSION['blogpostmessage'];
+      unset($_SESSION['blogpostmessage']);
+    }
+}
+function set_updateblogpost_message($updateblogpostmessage) {
+    if(!empty($updateblogpostmessage)) {
+        $_SESSION['blogpostmessage'] = $updateblogpostmessage;
+    }
+    else {
+        $updateblogpostmessage = "";
+    }
+}
+function update_blogpost_message() {
+  if(isset($_SESSION['updateblogpostmessage'])) {
+      echo $_SESSION['updateblogpostmessage'];
+      unset($_SESSION['updateblogpostmessage']);
+    }
+}
+
 
  ?>

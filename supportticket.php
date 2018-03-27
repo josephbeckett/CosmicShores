@@ -19,10 +19,10 @@ if(isset($_POST['submit'])) {
     VALUES ('$myproblemtitle', '$myproblemsubtitle', '$myproblemcontent', '$mycurrentdate', '$uid')";
     if (mysqli_query($conn, $sql)) {
         set_message("Support Ticket successfully submitted, please be patient");
-        header("Location: loginhomepage.php");
     } else {
         set_message("Unable to submit ticket ");
     }
+    header("Location: loginhomepage.php");
 }
 
 ?>

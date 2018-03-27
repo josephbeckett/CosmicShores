@@ -60,7 +60,9 @@ include("userdetails.php");
           </div>
         </div>
       </div>
-      <h4><?php update_details_message(); ?></h4>
+      <div class="center">
+        <h4><?php update_details_message(); ?></h4>
+      </div>
     </div>
 
 

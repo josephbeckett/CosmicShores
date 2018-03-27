@@ -12,7 +12,11 @@
         $content = mysqli_real_escape_string($conn, $_POST['PostContent']);
 
         $sql = "UPDATE Blog SET PostTitle='$title', PostContent='$content' WHERE PostID=$pid";
-        mysqli_query($conn, $sql);
+        if (mysqli_query($conn, $sql)) {
+            set_updateblogpost_message("Blog post updated successfully");
+        } else {
+            set_updateblogpost_message("Unable to update blog post");
+        }
         header("Location: blog.php");
     }
 
