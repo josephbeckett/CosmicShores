@@ -7,25 +7,21 @@
         $imgsql = "SELECT Image FROM Photos WHERE ImageID = $photoid";
         $image = $row['Image'];
         $file = "uploadedimages/$photoid";
-        if($image == $file)
+        if (!unlink($file))
           {
-            $photoid = $_GET['photoid'];
-            $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
-            mysqli_query($conn, $sql);
-            unlink($file);
-            set_delgallerypost_message("Deleted $file");
+          set_delgallerypost_message("Error deleting $file");
           }
         else
           {
-            set_delgallerypost_message("Error deleting $file");
+          set_delgallerypost_message("Deleted $file");
           }
-        // $photoid = $_GET['photoid'];
-        // $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
-        // if(mysqli_query($conn, $sql)) {
-        //     set_delgallerypost_message("Image deleted successfully");
-        // } else {
-        //     set_delgallerypost_message("Unable to delete image");
-        // }
+        $photoid = $_GET['photoid'];
+        $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
+        if(mysqli_query($conn, $sql)) {
+            set_delgallerypost_message("Image deleted successfully");
+        } else {
+            set_delgallerypost_message("Unable to delete image");
+        }
         header('Location: gallery.php');
     }
 
