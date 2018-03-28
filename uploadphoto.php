@@ -39,7 +39,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    set_gallerypost_message("Sorry, your file was not uploaded.");
+    // set_gallerypost_message("Sorry, your file was not uploaded.");
     header("Location: gallery.php");
 // if everything is ok, try to upload file
 } else {
