@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $decryptpassword = password_verify($mypassword, $row['Password']);
         if($decryptpassword == false) {
           header("Location: login.php?login=error");
-          $info = ("Your username or password is incorrect")
+          $info = ("Your username or password is incorrect");
 
         } elseif ($decryptpassword == true) {
             $_SESSION['login_user'] = $row['CustomerID'];
