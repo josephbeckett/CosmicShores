@@ -46,6 +46,7 @@ ini_set('display_errors', 1);
             <button class="waves-effect waves-light btn" type="submit">Login</button>
         </div>
     </form>
+    <?php echo $info; ?>
 
 
     <!--Import jQuery before materialize.js-->
