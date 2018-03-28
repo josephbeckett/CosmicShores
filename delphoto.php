@@ -15,7 +15,7 @@
           {
             $photoid = $_GET['photoid'];
             $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
-            mysqli_query($conn, $sql)
+            mysqli_query($conn, $sql);
             set_delgallerypost_message("Deleted $file");
           }
         // $photoid = $_GET['photoid'];
