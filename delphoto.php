@@ -13,15 +13,18 @@
           }
         else
           {
-          set_delgallerypost_message("Deleted $file");
+            $photoid = $_GET['photoid'];
+            $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
+            mysqli_query($conn, $sql)
+            set_delgallerypost_message("Deleted $file");
           }
-        $photoid = $_GET['photoid'];
-        $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
-        if(mysqli_query($conn, $sql)) {
-            set_delgallerypost_message("Image deleted successfully");
-        } else {
-            set_delgallerypost_message("Unable to delete image");
-        }
+        // $photoid = $_GET['photoid'];
+        // $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
+        // if(mysqli_query($conn, $sql)) {
+        //     set_delgallerypost_message("Image deleted successfully");
+        // } else {
+        //     set_delgallerypost_message("Unable to delete image");
+        // }
         header('Location: gallery.php');
     }
 
