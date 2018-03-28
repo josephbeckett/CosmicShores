@@ -38,20 +38,11 @@
 
 	  <!-- Content -->
     <div class="center">
-      <h4>Blog Posts</h4>
-      <h6><?php post_blogpost_message(); ?></h6>
-      <h6><?php update_blogpost_message(); ?></h6>
-      <h6><?php display_delblogpost_message(); ?></h6>
+      <h4 class="flow-text">Blog Posts</h4>
+      <h6 class="flow-text"><?php post_blogpost_message(); ?></h6>
+      <h6 class="flow-text"><?php update_blogpost_message(); ?></h6>
+      <h6 class="flow-text"><?php display_delblogpost_message(); ?></h6>
       <?php
-        // $sql1 = " SELECT user.Username
-        //   FROM user
-        //   INNER JOIN blog
-        //   ON user.CustomerID = blog.CustomerID";
-        // $query1 = mysqli_query($conn, $sql1) or die(mysqli_error($conn));
-        // while($row1 = mysqli_fetch_array($query1, MYSQLI_ASSOC)) {
-        //   $username = $row["Username"];
-        // }
-        // $sql ="SELECT user.Username FROM user INNER JOIN blog ON user.CustomerID = blog.CustomerID";
 
         require_once("nbbc/nbbc.php");
 

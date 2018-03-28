@@ -51,8 +51,8 @@ $info = "";
       <div class="container">
         <div class="center">
           <h1 class="flow-text">Support Tickets</h1>
-          <h4> <?php display_delsupportticket_message(); ?> </h4>
-          <h4> <?php display_delallsupportticket_message(); ?> </h4>
+          <h4 class="flow-text"> <?php display_delsupportticket_message(); ?> </h4>
+          <h4 class="flow-text"> <?php display_delallsupportticket_message(); ?> </h4>
           <a class="waves-effect waves-light btn" href='truncatesupport.php'>Delete All</a>
           <br />
           <?php
