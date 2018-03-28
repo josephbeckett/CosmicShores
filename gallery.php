@@ -56,7 +56,7 @@
             $posts .= "<div class='row'>
                           <div class='container'>
                             <a href='gallery.php?photoid=$photoid'>
-                            <img class='responsive-image' src='uploadedimages/$image'/></a>
+                            <img class='responsive-img' src='uploadedimages/$image'/></a>
                             <p class='flow-text'>posted by $username on $date</p>$admin
                           </div>
                       </div>";
