@@ -44,7 +44,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        set_gallerypost_message("The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.");
         header("Location: gallery.php");
     } else {
         set_gallerypost_message("Sorry, there was an error uploading your file.");
@@ -52,16 +52,16 @@ if ($uploadOk == 0) {
     }
 }
 
-$image = ($_FILES['fileToUpload']['name']);
-$date = date('l jS \of F Y h:i:s A');
-$uid = $_SESSION['login_user'];
-$sql = "INSERT INTO Photos (Image, ImageDate, CustomerID) VALUES ('$image', '$date', '$uid')";
-if (mysqli_query($conn, $sql)) {
-    set_gallerypost_message("Image uploaded successfully");
-    header("Location: gallery.php");
-} else {
-    set_gallerypost_message("Unable to upload image");
-    header("Location: gallery.php");
-}
+  $image = ($_FILES['fileToUpload']['name']);
+  $date = date('l jS \of F Y h:i:s A');
+  $uid = $_SESSION['login_user'];
+  $sql = "INSERT INTO Photos (Image, ImageDate, CustomerID) VALUES ('$image', '$date', '$uid')";
+  if (mysqli_query($conn, $sql)) {
+      set_gallerypost_message("Image uploaded successfully");
+      header("Location: gallery.php");
+  } else {
+      set_gallerypost_message("Unable to upload image");
+      header("Location: gallery.php");
+  }
 
 ?>
