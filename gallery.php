@@ -54,13 +54,11 @@
                 $admin = "<div><a href='delphoto.php?photoid=$photoid'>Delete</a></div>";
             }
             $posts .= "<div class='row'>
-                        <div class='col s12 m12 l12'>
                           <div class='container'>
                             <a href='gallery.php?photoid=$photoid'>
                             <img src='uploadedimages/$image'/></a>
                             <p class='flow-text'>posted by $username on $date</p>$admin
                           </div>
-                        </div>
                       </div>";
         }
         echo $posts;
