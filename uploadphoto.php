@@ -14,6 +14,7 @@ if(isset($_POST["submit"])) {
     } else {
         set_gallerypost_message("File is not an image.");
         $uploadOk = 0;
+        header("Location: gallery.php");
 
     }
 }
@@ -21,28 +22,33 @@ if(isset($_POST["submit"])) {
 if (file_exists($target_file)) {
     set_gallerypost_message("Sorry, file already exists.");
     $uploadOk = 0;
+    header("Location: gallery.php");
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
     set_gallerypost_message("Sorry, your file is too large.");
     $uploadOk = 0;
+    header("Location: gallery.php");
 }
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
     set_gallerypost_message("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
     $uploadOk = 0;
+    header("Location: gallery.php");
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     set_gallerypost_message("Sorry, your file was not uploaded.");
+    header("Location: gallery.php");
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        header("Location: gallery.php");
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        header("Location: gallery.php");
     } else {
         set_gallerypost_message("Sorry, there was an error uploading your file.");
+        header("Location: gallery.php");
     }
 }
 
@@ -55,5 +61,5 @@ if (mysqli_query($conn, $sql)) {
 } else {
     set_gallerypost_message("Unable to upload image");
 }
-header("Location: gallery.php")
+header("Location: gallery.php");
 ?>
