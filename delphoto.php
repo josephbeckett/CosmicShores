@@ -4,6 +4,7 @@
     if (!isset($_GET['photoid'])) {
         header('Location: gallery.php');
     } else {
+        $photoid = $_GET['photoid'];
         $imgsql = "SELECT Image FROM Photos WHERE ImageID = $photoid";
         $image = $row['Image'];
         $file = "uploadedimages/$photoid";
@@ -15,7 +16,6 @@
           {
           set_delgallerypost_message("Deleted $file");
           }
-        $photoid = $_GET['photoid'];
         $sql = "DELETE FROM Photos WHERE ImageID = $photoid";
         if(mysqli_query($conn, $sql)) {
             set_delgallerypost_message("Image deleted successfully");
