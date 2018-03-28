@@ -58,8 +58,10 @@ $uid = $_SESSION['login_user'];
 $sql = "INSERT INTO Photos (Image, ImageDate, CustomerID) VALUES ('$image', '$date', '$uid')";
 if (mysqli_query($conn, $sql)) {
     set_gallerypost_message("Image uploaded successfully");
+    header("Location: gallery.php");
 } else {
     set_gallerypost_message("Unable to upload image");
+    header("Location: gallery.php");
 }
-header("Location: gallery.php");
+
 ?>
